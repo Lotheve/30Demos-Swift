@@ -21,7 +21,10 @@ class BaseViewController: UIViewController {
     }
     
     @objc func actionBack() -> Void {
-        self.navigationController?.popViewController(animated: true)
+        
+        if let vcCount = self.navigationController?.viewControllers.count, vcCount > 1 {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 
     override func didReceiveMemoryWarning() {

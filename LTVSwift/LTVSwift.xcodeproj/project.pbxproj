@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6E1213001FA9718A007207D1 /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1212FF1FA9718A007207D1 /* TimerController.swift */; };
 		6E1213021FA9A0D8007207D1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1213011FA9A0D8007207D1 /* BaseViewController.swift */; };
+		6E1213051FA9A9D4007207D1 /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1213031FA9A9D4007207D1 /* TimerController.swift */; };
+		6E1213061FA9A9D4007207D1 /* TimerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E1213041FA9A9D4007207D1 /* TimerController.xib */; };
+		6E1213091FA9F9E9007207D1 /* TimerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1213071FA9F9E9007207D1 /* TimerCell.swift */; };
+		6E12130A1FA9F9E9007207D1 /* TimerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E1213081FA9F9E9007207D1 /* TimerCell.xib */; };
 		6E207D631FA71CE600E323EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E207D621FA71CE600E323EA /* AppDelegate.swift */; };
 		6E207D6A1FA71CE600E323EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E207D691FA71CE600E323EA /* Assets.xcassets */; };
 		6E207D6D1FA71CE600E323EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E207D6B1FA71CE600E323EA /* LaunchScreen.storyboard */; };
@@ -37,8 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6E1212FF1FA9718A007207D1 /* TimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerController.swift; sourceTree = "<group>"; };
 		6E1213011FA9A0D8007207D1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		6E1213031FA9A9D4007207D1 /* TimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerController.swift; sourceTree = "<group>"; };
+		6E1213041FA9A9D4007207D1 /* TimerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerController.xib; sourceTree = "<group>"; };
+		6E1213071FA9F9E9007207D1 /* TimerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCell.swift; sourceTree = "<group>"; };
+		6E1213081FA9F9E9007207D1 /* TimerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerCell.xib; sourceTree = "<group>"; };
 		6E207D5F1FA71CE600E323EA /* LTVSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LTVSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E207D621FA71CE600E323EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E207D691FA71CE600E323EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,7 +89,10 @@
 		6E1212FC1FA9714A007207D1 /* 1.计时器 */ = {
 			isa = PBXGroup;
 			children = (
-				6E1212FF1FA9718A007207D1 /* TimerController.swift */,
+				6E1213031FA9A9D4007207D1 /* TimerController.swift */,
+				6E1213041FA9A9D4007207D1 /* TimerController.xib */,
+				6E1213071FA9F9E9007207D1 /* TimerCell.swift */,
+				6E1213081FA9F9E9007207D1 /* TimerCell.xib */,
 			);
 			path = "1.计时器";
 			sourceTree = "<group>";
@@ -250,6 +259,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E207D6D1FA71CE600E323EA /* LaunchScreen.storyboard in Resources */,
+				6E12130A1FA9F9E9007207D1 /* TimerCell.xib in Resources */,
+				6E1213061FA9A9D4007207D1 /* TimerController.xib in Resources */,
 				6E207D6A1FA71CE600E323EA /* Assets.xcassets in Resources */,
 				6E207DB21FA73C9E00E323EA /* demoList.plist in Resources */,
 			);
@@ -278,9 +289,10 @@
 			files = (
 				6E1213021FA9A0D8007207D1 /* BaseViewController.swift in Sources */,
 				6E207D631FA71CE600E323EA /* AppDelegate.swift in Sources */,
-				6E1213001FA9718A007207D1 /* TimerController.swift in Sources */,
+				6E1213051FA9A9D4007207D1 /* TimerController.swift in Sources */,
 				6E207D911FA71E2300E323EA /* MainViewController.swift in Sources */,
 				6E207D931FA7236A00E323EA /* define.swift in Sources */,
+				6E1213091FA9F9E9007207D1 /* TimerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

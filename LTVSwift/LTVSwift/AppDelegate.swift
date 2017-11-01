@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = UIColor.lightGray
         let mainVC = MainViewController.init()
         let navc = UINavigationController.init(rootViewController: mainVC)
+        navc.navigationBar.isTranslucent = false
         window?.rootViewController = navc
         window?.makeKeyAndVisible()
         
