@@ -17,6 +17,8 @@ class TimerCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        self.selectionStyle = .none
+        
         self.labelLogo.backgroundColor = UIColor.clear
         self.labelLogo.layer.cornerRadius = self.labelLogo.bounds.size.width/2.0
         self.labelLogo.layer.borderColor = UIColor.init(red: 71/255.0, green: 75/255.0, blue: 82/255.0, alpha: 1).cgColor

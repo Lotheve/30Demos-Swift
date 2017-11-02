@@ -20,6 +20,9 @@
 		6E207D911FA71E2300E323EA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E207D901FA71E2300E323EA /* MainViewController.swift */; };
 		6E207D931FA7236A00E323EA /* define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E207D921FA7236A00E323EA /* define.swift */; };
 		6E207DB21FA73C9E00E323EA /* demoList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E207DB11FA73C9E00E323EA /* demoList.plist */; };
+		6E6E662C1FAABBDB00067A14 /* video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 6E6E662B1FAABBDB00067A14 /* video.mov */; };
+		6E71B0D61FAAB2C900710A45 /* VideoPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E71B0D41FAAB2C900710A45 /* VideoPlayerController.swift */; };
+		6E71B0D71FAAB2C900710A45 /* VideoPlayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E71B0D51FAAB2C900710A45 /* VideoPlayerController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		6E207D901FA71E2300E323EA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6E207D921FA7236A00E323EA /* define.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = define.swift; sourceTree = "<group>"; };
 		6E207DB11FA73C9E00E323EA /* demoList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = demoList.plist; sourceTree = "<group>"; };
+		6E6E662B1FAABBDB00067A14 /* video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.mov; sourceTree = "<group>"; };
+		6E71B0D41FAAB2C900710A45 /* VideoPlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerController.swift; sourceTree = "<group>"; };
+		6E71B0D51FAAB2C900710A45 /* VideoPlayerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoPlayerController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +130,7 @@
 				6E207D901FA71E2300E323EA /* MainViewController.swift */,
 				6E1213011FA9A0D8007207D1 /* BaseViewController.swift */,
 				6E1212FC1FA9714A007207D1 /* 1.计时器 */,
+				6E71B0CF1FAAB13200710A45 /* 2.视频播放器 */,
 				6E207D691FA71CE600E323EA /* Assets.xcassets */,
 				6E207D6B1FA71CE600E323EA /* LaunchScreen.storyboard */,
 				6E207D6E1FA71CE600E323EA /* Info.plist */,
@@ -149,6 +156,16 @@
 				6E207D841FA71CE600E323EA /* Info.plist */,
 			);
 			path = LTVSwiftUITests;
+			sourceTree = "<group>";
+		};
+		6E71B0CF1FAAB13200710A45 /* 2.视频播放器 */ = {
+			isa = PBXGroup;
+			children = (
+				6E6E662B1FAABBDB00067A14 /* video.mov */,
+				6E71B0D41FAAB2C900710A45 /* VideoPlayerController.swift */,
+				6E71B0D51FAAB2C900710A45 /* VideoPlayerController.xib */,
+			);
+			path = "2.视频播放器";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +275,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E6E662C1FAABBDB00067A14 /* video.mov in Resources */,
+				6E71B0D71FAAB2C900710A45 /* VideoPlayerController.xib in Resources */,
 				6E207D6D1FA71CE600E323EA /* LaunchScreen.storyboard in Resources */,
 				6E12130A1FA9F9E9007207D1 /* TimerCell.xib in Resources */,
 				6E1213061FA9A9D4007207D1 /* TimerController.xib in Resources */,
@@ -287,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E71B0D61FAAB2C900710A45 /* VideoPlayerController.swift in Sources */,
 				6E1213021FA9A0D8007207D1 /* BaseViewController.swift in Sources */,
 				6E207D631FA71CE600E323EA /* AppDelegate.swift in Sources */,
 				6E1213051FA9A9D4007207D1 /* TimerController.swift in Sources */,

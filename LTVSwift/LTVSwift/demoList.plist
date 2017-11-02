@@ -10,9 +10,9 @@
 	</dict>
 	<dict>
 		<key>DemoItem</key>
-		<string>未知</string>
+		<string>视频播放器</string>
 		<key>DemoBusiness</key>
-		<string></string>
+		<string>VideoPlayerController</string>
 	</dict>
 	<dict>
 		<key>DemoItem</key>
