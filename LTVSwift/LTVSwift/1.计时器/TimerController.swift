@@ -46,6 +46,14 @@ class TimerController: BaseViewController,UITableViewDataSource,UITableViewDeleg
         self.tableMain.register(UINib.init(nibName: "TimerCell", bundle: nil), forCellReuseIdentifier: "TimerCellID")
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if timer != nil && (timer?.isValid)! {
+            timer?.invalidate()
+            timer = nil
+        }
+    }
+    
     func configUI() {
 
         self.circleView.layer.cornerRadius = self.circleView.bounds.size.width/2.0

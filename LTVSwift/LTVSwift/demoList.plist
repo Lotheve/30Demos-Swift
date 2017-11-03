@@ -16,9 +16,9 @@
 	</dict>
 	<dict>
 		<key>DemoItem</key>
-		<string>待定</string>
+		<string>定位服务</string>
 		<key>DemoBusiness</key>
-		<string></string>
+		<string>LocationServiceController</string>
 	</dict>
 </array>
 </plist>

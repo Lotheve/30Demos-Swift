@@ -26,6 +26,15 @@ class BaseViewController: UIViewController {
             self.navigationController?.popViewController(animated: true)
         }
     }
+    
+    func addEndEditGesture() {
+        let tap:UITapGestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(endEdit))
+        self.view.addGestureRecognizer(tap)
+    }
+    
+    @objc func endEdit() {
+        self.view.endEditing(true)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

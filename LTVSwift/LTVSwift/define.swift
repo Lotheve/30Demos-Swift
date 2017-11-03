@@ -18,3 +18,7 @@ let DEME_BUSINESS = "DemoBusiness"
 let SCREEN_WIDTH = UIScreen.main.bounds.size.width
 let SCREEN_HEIGHT = UIScreen.main.bounds.size.height
 
+//TODO: - 适配iPhoneX
+let NAVI_BAR_HEIGHT = 64
+
+
