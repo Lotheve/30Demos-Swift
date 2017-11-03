@@ -39,8 +39,6 @@ class LocationServiceController: BaseViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
 
-        self.geocodingLocationTF.text = "asdada"
-        
         locationManager = LTVLocationManager.shareManager
         locationManager?.locationFaction = {
             (coordinate:CLLocationCoordinate2D?) in

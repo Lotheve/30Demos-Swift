@@ -16,6 +16,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        if #available(iOS 9.0, *) {
+            let icon1 = UIApplicationShortcutIcon.init(type: .pause)
+            let item1 = UIApplicationShortcutItem.init(type: "timer", localizedTitle: "计时器", localizedSubtitle: nil, icon: icon1, userInfo: ["key":"timer"])
+            let icon2 = UIApplicationShortcutIcon.init(type: .play)
+            let item2 = UIApplicationShortcutItem.init(type: "videoPlayer", localizedTitle: "视频播放器", localizedSubtitle: nil, icon: icon2, userInfo: ["key":"video"])
+            let icon3 = UIApplicationShortcutIcon.init(type: .location)
+            let item3 = UIApplicationShortcutItem.init(type: "location", localizedTitle: "定位服务", localizedSubtitle: nil, icon: icon3, userInfo: ["key":"location"])
+            let icon4 = UIApplicationShortcutIcon.init(type: .add)
+            let item4 = UIApplicationShortcutItem.init(type: "3DTouch", localizedTitle: "3DTouch", localizedSubtitle: nil, icon: icon4, userInfo: ["key":"3DTouch"])
+            UIApplication.shared.shortcutItems = [item1,item2,item3,item4]
+        }
+        
+        
         
         window = UIWindow.init()
         window?.backgroundColor = UIColor.lightGray
@@ -26,6 +40,60 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         return true
+    }
+    
+    @available(iOS 9.0, *)
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        
+        let key = shortcutItem.userInfo!["key"] as! String
+        
+        var demos:[Dictionary<String, String>]?
+        let path = Bundle.main.path(forResource: "demoList", ofType: "plist")
+        if path != nil{
+            if let content = NSArray(contentsOfFile:path!) {
+                demos = content as? [Dictionary<String, String>]
+            }
+        }
+        
+        var business:String?
+        var title:String?
+        
+        
+        if let demos = demos, demos.count > 0 {
+            for demo:[String: String] in demos {
+                if demo[DEMO_KEY] == key {
+                    business = demo[DEME_BUSINESS]
+                    title = demo[DEMO_ITEM]
+                    break
+                }
+            }
+        }
+        
+        guard let _ = business else {
+            completionHandler(true)
+            return
+        }
+        
+        let navc = window?.rootViewController as! UINavigationController
+        
+        let nameSpace = Bundle.main.infoDictionary!["CFBundleExecutable"]
+        guard let ns = nameSpace as? String else{
+            assert(false, "无法获取命名空间")
+            return
+        }
+        let aClass: AnyClass? = NSClassFromString("\(ns).\(business!)")
+        guard let classType = aClass as? UIViewController.Type else {
+            return
+        }
+        let vc = classType.init()
+        vc.title = title ?? ""
+        
+        if navc.viewControllers.count > 1 {
+            navc.popToRootViewController(animated: false)
+        }
+        navc.show(vc, sender: nil)
+
+        completionHandler(true)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -50,6 +118,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    
 
 }
 

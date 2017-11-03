@@ -3,22 +3,36 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>DemoKey</key>
+		<string>timer</string>
 		<key>DemoItem</key>
 		<string>计时器</string>
 		<key>DemoBusiness</key>
 		<string>TimerController</string>
 	</dict>
 	<dict>
+		<key>DemoKey</key>
+		<string>video</string>
 		<key>DemoItem</key>
 		<string>视频播放器</string>
 		<key>DemoBusiness</key>
 		<string>VideoPlayerController</string>
 	</dict>
 	<dict>
+		<key>DemoKey</key>
+		<string>location</string>
 		<key>DemoItem</key>
 		<string>定位服务</string>
 		<key>DemoBusiness</key>
 		<string>LocationServiceController</string>
+	</dict>
+	<dict>
+		<key>DemoKey</key>
+		<string>3DTouch</string>
+		<key>DemoItem</key>
+		<string>3DTouch</string>
+		<key>DemoBusiness</key>
+		<string>ThreeDTouchController</string>
 	</dict>
 </array>
 </plist>

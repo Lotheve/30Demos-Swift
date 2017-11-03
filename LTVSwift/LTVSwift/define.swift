@@ -11,9 +11,9 @@ import Foundation
 import UIKit
 import CoreGraphics
 
+let DEMO_KEY = "DemoKey"
 let DEMO_ITEM = "DemoItem"
 let DEME_BUSINESS = "DemoBusiness"
-
 
 let SCREEN_WIDTH = UIScreen.main.bounds.size.width
 let SCREEN_HEIGHT = UIScreen.main.bounds.size.height
