@@ -34,5 +34,13 @@
 		<key>DemoBusiness</key>
 		<string>ThreeDTouchController</string>
 	</dict>
+	<dict>
+		<key>DemoKey</key>
+		<string>Gradient</string>
+		<key>DemoItem</key>
+		<string>Graduate Color</string>
+		<key>DemoBusiness</key>
+		<string>GraduateColorController</string>
+	</dict>
 </array>
 </plist>
