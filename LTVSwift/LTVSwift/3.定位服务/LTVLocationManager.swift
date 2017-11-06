@@ -118,5 +118,4 @@ class LTVLocationManager: NSObject,CLLocationManagerDelegate {
             locationFaction!(nil)
         }
     }
-
 }

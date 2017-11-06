@@ -119,12 +119,6 @@ class LocationServiceController: BaseViewController {
     }
     
     //MARK: - Other
-    
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-        print("LocationServiceController " + #function)
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

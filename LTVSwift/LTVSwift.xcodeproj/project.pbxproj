@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E114FF51FB00114009AD905 /* DataPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E114FF31FB00114009AD905 /* DataPickerController.swift */; };
+		6E114FF61FB00114009AD905 /* DataPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E114FF41FB00114009AD905 /* DataPickerController.xib */; };
+		6E114FF81FB00726009AD905 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E114FF71FB00726009AD905 /* DatePickerView.swift */; };
+		6E114FFC1FB0073A009AD905 /* AreaPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E114FFB1FB0073A009AD905 /* AreaPickerView.swift */; };
 		6E1213021FA9A0D8007207D1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1213011FA9A0D8007207D1 /* BaseViewController.swift */; };
 		6E1213051FA9A9D4007207D1 /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1213031FA9A9D4007207D1 /* TimerController.swift */; };
 		6E1213061FA9A9D4007207D1 /* TimerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E1213041FA9A9D4007207D1 /* TimerController.xib */; };
@@ -24,6 +28,7 @@
 		6E3FBAB01FAC42CE00157CFE /* ThreeDTouchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3FBAAE1FAC42CD00157CFE /* ThreeDTouchController.swift */; };
 		6E3FBAB11FAC42CE00157CFE /* ThreeDTouchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E3FBAAF1FAC42CE00157CFE /* ThreeDTouchController.xib */; };
 		6E3FBAB31FAC557400157CFE /* PreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3FBAB21FAC557400157CFE /* PreviewController.swift */; };
+		6E52B9DB1FB034D8007FBCB3 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E52B9DA1FB034D8007FBCB3 /* area.plist */; };
 		6E6E662C1FAABBDB00067A14 /* video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 6E6E662B1FAABBDB00067A14 /* video.mov */; };
 		6E6E66301FAAC18D00067A14 /* LocationServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6E662E1FAAC18D00067A14 /* LocationServiceController.swift */; };
 		6E6E66311FAAC18D00067A14 /* LocationServiceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E6E662F1FAAC18D00067A14 /* LocationServiceController.xib */; };
@@ -52,6 +57,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E114FF31FB00114009AD905 /* DataPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPickerController.swift; sourceTree = "<group>"; };
+		6E114FF41FB00114009AD905 /* DataPickerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataPickerController.xib; sourceTree = "<group>"; };
+		6E114FF71FB00726009AD905 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		6E114FFB1FB0073A009AD905 /* AreaPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaPickerView.swift; sourceTree = "<group>"; };
 		6E1213011FA9A0D8007207D1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		6E1213031FA9A9D4007207D1 /* TimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerController.swift; sourceTree = "<group>"; };
 		6E1213041FA9A9D4007207D1 /* TimerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerController.xib; sourceTree = "<group>"; };
@@ -75,6 +84,7 @@
 		6E3FBAAE1FAC42CD00157CFE /* ThreeDTouchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDTouchController.swift; sourceTree = "<group>"; };
 		6E3FBAAF1FAC42CE00157CFE /* ThreeDTouchController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThreeDTouchController.xib; sourceTree = "<group>"; };
 		6E3FBAB21FAC557400157CFE /* PreviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewController.swift; sourceTree = "<group>"; };
+		6E52B9DA1FB034D8007FBCB3 /* area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = area.plist; sourceTree = "<group>"; };
 		6E6E662B1FAABBDB00067A14 /* video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.mov; sourceTree = "<group>"; };
 		6E6E662E1FAAC18D00067A14 /* LocationServiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceController.swift; sourceTree = "<group>"; };
 		6E6E662F1FAAC18D00067A14 /* LocationServiceController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationServiceController.xib; sourceTree = "<group>"; };
@@ -110,6 +120,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E114FF01FB000E5009AD905 /* 6.数据选择器 */ = {
+			isa = PBXGroup;
+			children = (
+				6E114FF31FB00114009AD905 /* DataPickerController.swift */,
+				6E114FF41FB00114009AD905 /* DataPickerController.xib */,
+				6E114FF71FB00726009AD905 /* DatePickerView.swift */,
+				6E114FFB1FB0073A009AD905 /* AreaPickerView.swift */,
+				6E52B9DA1FB034D8007FBCB3 /* area.plist */,
+			);
+			path = "6.数据选择器";
+			sourceTree = "<group>";
+		};
 		6E1212FC1FA9714A007207D1 /* 1.计时器 */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +174,7 @@
 				6E6E662D1FAAC16B00067A14 /* 3.定位服务 */,
 				6E39D0AE1FAC3ADA00F7294F /* 4.3DTouch */,
 				6E8560551FAE014E00A31BBF /* 5.渐变色 */,
+				6E114FF01FB000E5009AD905 /* 6.数据选择器 */,
 				6E207D691FA71CE600E323EA /* Assets.xcassets */,
 				6E207D6B1FA71CE600E323EA /* LaunchScreen.storyboard */,
 				6E207D6E1FA71CE600E323EA /* Info.plist */,
@@ -331,11 +354,13 @@
 				6E207D6D1FA71CE600E323EA /* LaunchScreen.storyboard in Resources */,
 				6E3FBAB11FAC42CE00157CFE /* ThreeDTouchController.xib in Resources */,
 				6E12130A1FA9F9E9007207D1 /* TimerCell.xib in Resources */,
+				6E52B9DB1FB034D8007FBCB3 /* area.plist in Resources */,
 				6E6E66311FAAC18D00067A14 /* LocationServiceController.xib in Resources */,
 				6EE1EF601FAFEFD000FB55CD /* GraduateColorController.xib in Resources */,
 				6E1213061FA9A9D4007207D1 /* TimerController.xib in Resources */,
 				6E207D6A1FA71CE600E323EA /* Assets.xcassets in Resources */,
 				6E207DB21FA73C9E00E323EA /* demoList.plist in Resources */,
+				6E114FF61FB00114009AD905 /* DataPickerController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,8 +388,10 @@
 				6E6E66301FAAC18D00067A14 /* LocationServiceController.swift in Sources */,
 				6E8560571FAE01E600A31BBF /* GraduateColorController.swift in Sources */,
 				6E71B0D61FAAB2C900710A45 /* VideoPlayerController.swift in Sources */,
+				6E114FF51FB00114009AD905 /* DataPickerController.swift in Sources */,
 				6E3025FA1FAC68D1005634DF /* LTVTableView.swift in Sources */,
 				6E1213021FA9A0D8007207D1 /* BaseViewController.swift in Sources */,
+				6E114FF81FB00726009AD905 /* DatePickerView.swift in Sources */,
 				6E3FBAB31FAC557400157CFE /* PreviewController.swift in Sources */,
 				6E207D631FA71CE600E323EA /* AppDelegate.swift in Sources */,
 				6E1213051FA9A9D4007207D1 /* TimerController.swift in Sources */,
@@ -372,6 +399,7 @@
 				6E207D911FA71E2300E323EA /* MainViewController.swift in Sources */,
 				6E207D931FA7236A00E323EA /* define.swift in Sources */,
 				6E1213091FA9F9E9007207D1 /* TimerCell.swift in Sources */,
+				6E114FFC1FB0073A009AD905 /* AreaPickerView.swift in Sources */,
 				6E6E66331FAAC70000067A14 /* LTVLocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

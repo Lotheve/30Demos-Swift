@@ -42,5 +42,13 @@
 		<key>DemoBusiness</key>
 		<string>GraduateColorController</string>
 	</dict>
+	<dict>
+		<key>DemoKey</key>
+		<string>Picker</string>
+		<key>DemoItem</key>
+		<string>DataPicker</string>
+		<key>DemoBusiness</key>
+		<string>DataPickerController</string>
+	</dict>
 </array>
 </plist>

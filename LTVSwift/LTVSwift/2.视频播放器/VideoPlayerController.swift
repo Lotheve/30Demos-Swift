@@ -37,10 +37,6 @@ class VideoPlayerController: BaseViewController {
         }
     }
     
-    deinit {
-        print("VideoPlayerController " + #function)
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

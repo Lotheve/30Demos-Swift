@@ -175,8 +175,4 @@ class TimerController: BaseViewController,UITableViewDataSource,UITableViewDeleg
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    deinit {
-        print("TimerController " + #function)
-    }
 }

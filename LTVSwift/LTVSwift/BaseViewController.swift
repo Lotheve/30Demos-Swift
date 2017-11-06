@@ -39,4 +39,8 @@ class BaseViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    deinit {
+        print("\(type(of: self)) deinit")
+    }
 }
