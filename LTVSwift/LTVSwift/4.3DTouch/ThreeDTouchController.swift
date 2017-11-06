@@ -7,7 +7,7 @@
 //
 
 /*
- 3D 功能
+ 3D Touch 功能
  一、应用图标捷径（相关代码见AppDelegate）
  二、Peek & Pop
  三、触摸压力感知

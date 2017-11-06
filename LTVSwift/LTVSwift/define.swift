@@ -19,6 +19,6 @@ let SCREEN_WIDTH = UIScreen.main.bounds.size.width
 let SCREEN_HEIGHT = UIScreen.main.bounds.size.height
 
 //TODO: - 适配iPhoneX
-let NAVI_BAR_HEIGHT = 64
+let NAVI_BAR_HEIGHT = CGFloat(64.0)
 
 

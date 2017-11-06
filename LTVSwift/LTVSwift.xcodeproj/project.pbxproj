@@ -31,6 +31,7 @@
 		6E71B0D61FAAB2C900710A45 /* VideoPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E71B0D41FAAB2C900710A45 /* VideoPlayerController.swift */; };
 		6E71B0D71FAAB2C900710A45 /* VideoPlayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E71B0D51FAAB2C900710A45 /* VideoPlayerController.xib */; };
 		6E8560571FAE01E600A31BBF /* GraduateColorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8560561FAE01E600A31BBF /* GraduateColorController.swift */; };
+		6EE1EF601FAFEFD000FB55CD /* GraduateColorController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EE1EF5F1FAFEFD000FB55CD /* GraduateColorController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		6E71B0D41FAAB2C900710A45 /* VideoPlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerController.swift; sourceTree = "<group>"; };
 		6E71B0D51FAAB2C900710A45 /* VideoPlayerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoPlayerController.xib; sourceTree = "<group>"; };
 		6E8560561FAE01E600A31BBF /* GraduateColorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraduateColorController.swift; sourceTree = "<group>"; };
+		6EE1EF5F1FAFEFD000FB55CD /* GraduateColorController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GraduateColorController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				6E8560561FAE01E600A31BBF /* GraduateColorController.swift */,
+				6EE1EF5F1FAFEFD000FB55CD /* GraduateColorController.xib */,
 			);
 			path = "5.渐变色";
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				6E3FBAB11FAC42CE00157CFE /* ThreeDTouchController.xib in Resources */,
 				6E12130A1FA9F9E9007207D1 /* TimerCell.xib in Resources */,
 				6E6E66311FAAC18D00067A14 /* LocationServiceController.xib in Resources */,
+				6EE1EF601FAFEFD000FB55CD /* GraduateColorController.xib in Resources */,
 				6E1213061FA9A9D4007207D1 /* TimerController.xib in Resources */,
 				6E207D6A1FA71CE600E323EA /* Assets.xcassets in Resources */,
 				6E207DB21FA73C9E00E323EA /* demoList.plist in Resources */,
