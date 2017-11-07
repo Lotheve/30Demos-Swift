@@ -50,5 +50,13 @@
 		<key>DemoBusiness</key>
 		<string>DataPickerController</string>
 	</dict>
+	<dict>
+		<key>DemoKey</key>
+		<string>Carousel</string>
+		<key>DemoItem</key>
+		<string>旋转木马相册</string>
+		<key>DemoBusiness</key>
+		<string>CarouselController</string>
+	</dict>
 </array>
 </plist>
