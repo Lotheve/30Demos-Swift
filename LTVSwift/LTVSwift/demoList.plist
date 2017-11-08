@@ -66,5 +66,13 @@
 		<key>DemoBusiness</key>
 		<string>CameraController</string>
 	</dict>
+	<dict>
+		<key>DemoKey</key>
+		<string>refresh</string>
+		<key>DemoItem</key>
+		<string>下拉刷新</string>
+		<key>DemoBusiness</key>
+		<string>RefreshActionController</string>
+	</dict>
 </array>
 </plist>

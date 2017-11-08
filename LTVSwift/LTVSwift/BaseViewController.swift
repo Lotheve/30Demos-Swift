@@ -15,7 +15,7 @@ class BaseViewController: UIViewController {
 
         self.view.backgroundColor = UIColor.white
         
-        let leftBarItem = UIBarButtonItem.init(title: "返回", style: .plain, target: self, action:#selector(actionBack))
+        let leftBarItem = UIBarButtonItem(title: "返回", style: .plain, target: self, action:#selector(actionBack))
         leftBarItem.tintColor = UIColor.black
         self.navigationItem.leftBarButtonItem = leftBarItem
     }
@@ -28,7 +28,7 @@ class BaseViewController: UIViewController {
     }
     
     func addEndEditGesture() {
-        let tap:UITapGestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(endEdit))
+        let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(endEdit))
         self.view.addGestureRecognizer(tap)
     }
     

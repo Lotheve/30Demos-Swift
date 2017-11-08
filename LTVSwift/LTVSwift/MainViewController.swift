@@ -13,12 +13,12 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     var dataSource:[Dictionary<String, String>]?
     
     lazy var tableMain:UITableView = {
-        let table = UITableView.init()
-        table.frame = CGRect.init(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT)
+        let table = UITableView()
+        table.frame = CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT)
         table.backgroundColor = UIColor.lightGray
         table.delegate = self;
         table.dataSource = self;
-        table.tableFooterView = UIView.init();
+        table.tableFooterView = UIView();
         table.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCellID")
         return table
     }()
