@@ -58,5 +58,13 @@
 		<key>DemoBusiness</key>
 		<string>CarouselController</string>
 	</dict>
+	<dict>
+		<key>DemoKey</key>
+		<string>Camera</string>
+		<key>DemoItem</key>
+		<string>相机使用</string>
+		<key>DemoBusiness</key>
+		<string>CameraController</string>
+	</dict>
 </array>
 </plist>
