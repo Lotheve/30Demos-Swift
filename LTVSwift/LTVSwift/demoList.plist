@@ -74,5 +74,13 @@
 		<key>DemoBusiness</key>
 		<string>RefreshActionController</string>
 	</dict>
+	<dict>
+		<key>DemoKey</key>
+		<string>ImageTransform</string>
+		<key>DemoItem</key>
+		<string>图片旋转缩放及模糊</string>
+		<key>DemoBusiness</key>
+		<string>ImageTransformController</string>
+	</dict>
 </array>
 </plist>

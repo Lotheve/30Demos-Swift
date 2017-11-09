@@ -24,10 +24,10 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="mQ0-Rz-gXK" firstAttribute="top" secondItem="DqE-RC-ZTn" secondAttribute="top" constant="8" id="80F-UW-CBY"/>
+                <constraint firstItem="mQ0-Rz-gXK" firstAttribute="top" relation="lessThanOrEqual" secondItem="DqE-RC-ZTn" secondAttribute="top" constant="8" id="80F-UW-CBY"/>
                 <constraint firstItem="mQ0-Rz-gXK" firstAttribute="leading" secondItem="DqE-RC-ZTn" secondAttribute="leading" constant="60" id="Hgn-c5-Rs9"/>
                 <constraint firstAttribute="trailing" secondItem="mQ0-Rz-gXK" secondAttribute="trailing" constant="60" id="he2-co-88D"/>
-                <constraint firstAttribute="bottom" secondItem="mQ0-Rz-gXK" secondAttribute="bottom" constant="8" id="qRn-eR-Bkg"/>
+                <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="mQ0-Rz-gXK" secondAttribute="bottom" constant="8" id="qRn-eR-Bkg"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
