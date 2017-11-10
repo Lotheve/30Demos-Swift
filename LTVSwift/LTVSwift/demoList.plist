@@ -90,5 +90,13 @@
 		<key>DemoBusiness</key>
 		<string>GradientTableController</string>
 	</dict>
+	<dict>
+		<key>DemoKey</key>
+		<string>AnimLogin</string>
+		<key>DemoItem</key>
+		<string>带动画登陆页(仿readme.io)</string>
+		<key>DemoBusiness</key>
+		<string>AnimLoginViewController</string>
+	</dict>
 </array>
 </plist>

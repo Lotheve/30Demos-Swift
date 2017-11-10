@@ -24,6 +24,16 @@
 		6E207D911FA71E2300E323EA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E207D901FA71E2300E323EA /* MainViewController.swift */; };
 		6E207D931FA7236A00E323EA /* define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E207D921FA7236A00E323EA /* define.swift */; };
 		6E207DB21FA73C9E00E323EA /* demoList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E207DB11FA73C9E00E323EA /* demoList.plist */; };
+		6E2995F81FB54DC5009EF254 /* AnimLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2995F61FB54DC5009EF254 /* AnimLoginViewController.swift */; };
+		6E2995F91FB54DC5009EF254 /* AnimLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E2995F71FB54DC5009EF254 /* AnimLoginViewController.xib */; };
+		6E2996021FB5509E009EF254 /* arm-down-left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2995FB1FB5509D009EF254 /* arm-down-left@2x.png */; };
+		6E2996031FB5509E009EF254 /* arm-down-right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2995FC1FB5509D009EF254 /* arm-down-right@2x.png */; };
+		6E2996041FB5509E009EF254 /* arm-up-left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2995FD1FB5509D009EF254 /* arm-up-left@2x.png */; };
+		6E2996051FB5509E009EF254 /* arm-up-right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2995FE1FB5509D009EF254 /* arm-up-right@2x.png */; };
+		6E2996061FB5509E009EF254 /* face@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2995FF1FB5509D009EF254 /* face@2x.png */; };
+		6E2996071FB5509E009EF254 /* iconfont-password.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2996001FB5509D009EF254 /* iconfont-password.png */; };
+		6E2996081FB5509E009EF254 /* iconfont-user.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2996011FB5509D009EF254 /* iconfont-user.png */; };
+		6E29960A1FB59023009EF254 /* LoginSuccessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2996091FB59023009EF254 /* LoginSuccessController.swift */; };
 		6E3025FA1FAC68D1005634DF /* LTVTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3025F91FAC68D1005634DF /* LTVTableView.swift */; };
 		6E3FBAB01FAC42CE00157CFE /* ThreeDTouchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3FBAAE1FAC42CD00157CFE /* ThreeDTouchController.swift */; };
 		6E3FBAB11FAC42CE00157CFE /* ThreeDTouchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E3FBAAF1FAC42CE00157CFE /* ThreeDTouchController.xib */; };
@@ -103,6 +113,16 @@
 		6E207D901FA71E2300E323EA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6E207D921FA7236A00E323EA /* define.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = define.swift; sourceTree = "<group>"; };
 		6E207DB11FA73C9E00E323EA /* demoList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = demoList.plist; sourceTree = "<group>"; };
+		6E2995F61FB54DC5009EF254 /* AnimLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimLoginViewController.swift; sourceTree = "<group>"; };
+		6E2995F71FB54DC5009EF254 /* AnimLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimLoginViewController.xib; sourceTree = "<group>"; };
+		6E2995FB1FB5509D009EF254 /* arm-down-left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arm-down-left@2x.png"; sourceTree = "<group>"; };
+		6E2995FC1FB5509D009EF254 /* arm-down-right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arm-down-right@2x.png"; sourceTree = "<group>"; };
+		6E2995FD1FB5509D009EF254 /* arm-up-left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arm-up-left@2x.png"; sourceTree = "<group>"; };
+		6E2995FE1FB5509D009EF254 /* arm-up-right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arm-up-right@2x.png"; sourceTree = "<group>"; };
+		6E2995FF1FB5509D009EF254 /* face@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face@2x.png"; sourceTree = "<group>"; };
+		6E2996001FB5509D009EF254 /* iconfont-password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconfont-password.png"; sourceTree = "<group>"; };
+		6E2996011FB5509D009EF254 /* iconfont-user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconfont-user.png"; sourceTree = "<group>"; };
+		6E2996091FB59023009EF254 /* LoginSuccessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSuccessController.swift; sourceTree = "<group>"; };
 		6E3025F91FAC68D1005634DF /* LTVTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTVTableView.swift; sourceTree = "<group>"; };
 		6E3FBAAE1FAC42CD00157CFE /* ThreeDTouchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDTouchController.swift; sourceTree = "<group>"; };
 		6E3FBAAF1FAC42CE00157CFE /* ThreeDTouchController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThreeDTouchController.xib; sourceTree = "<group>"; };
@@ -226,6 +246,7 @@
 				6E9A967D1FB2DBBD00405E1B /* 9. 下拉刷新 */,
 				6E57DA0B1FB305880064552F /* 10. 图片旋转缩放及模糊 */,
 				6ECA01671FB4375100D5F3A2 /* 11. TableViewCell背景渐变 */,
+				6E2995F51FB54D7E009EF254 /* 12. 带动画登陆页（仿readme.io） */,
 				6E207D691FA71CE600E323EA /* Assets.xcassets */,
 				6E207D6B1FA71CE600E323EA /* LaunchScreen.storyboard */,
 				6E207D6E1FA71CE600E323EA /* Info.plist */,
@@ -251,6 +272,31 @@
 				6E207D841FA71CE600E323EA /* Info.plist */,
 			);
 			path = LTVSwiftUITests;
+			sourceTree = "<group>";
+		};
+		6E2995F51FB54D7E009EF254 /* 12. 带动画登陆页（仿readme.io） */ = {
+			isa = PBXGroup;
+			children = (
+				6E2995F61FB54DC5009EF254 /* AnimLoginViewController.swift */,
+				6E2995F71FB54DC5009EF254 /* AnimLoginViewController.xib */,
+				6E2996091FB59023009EF254 /* LoginSuccessController.swift */,
+				6E2995FA1FB5509D009EF254 /* Resources */,
+			);
+			path = "12. 带动画登陆页（仿readme.io）";
+			sourceTree = "<group>";
+		};
+		6E2995FA1FB5509D009EF254 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6E2995FB1FB5509D009EF254 /* arm-down-left@2x.png */,
+				6E2995FC1FB5509D009EF254 /* arm-down-right@2x.png */,
+				6E2995FD1FB5509D009EF254 /* arm-up-left@2x.png */,
+				6E2995FE1FB5509D009EF254 /* arm-up-right@2x.png */,
+				6E2995FF1FB5509D009EF254 /* face@2x.png */,
+				6E2996001FB5509D009EF254 /* iconfont-password.png */,
+				6E2996011FB5509D009EF254 /* iconfont-user.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		6E39D0AE1FAC3ADA00F7294F /* 4.3DTouch */ = {
@@ -474,20 +520,28 @@
 				6E9A96211FB1865A00405E1B /* CarouselCell.xib in Resources */,
 				6E3FBAB11FAC42CE00157CFE /* ThreeDTouchController.xib in Resources */,
 				6E12130A1FA9F9E9007207D1 /* TimerCell.xib in Resources */,
+				6E2996071FB5509E009EF254 /* iconfont-password.png in Resources */,
 				6E9A96371FB18A4000405E1B /* 4.jpg in Resources */,
 				6E9A96361FB18A4000405E1B /* 3.jpg in Resources */,
 				6E57DA0A1FB2F7D80064552F /* RefreshContentView.xib in Resources */,
 				6E9A96351FB18A4000405E1B /* 2.jpg in Resources */,
 				6E52B9DB1FB034D8007FBCB3 /* area.plist in Resources */,
+				6E2996081FB5509E009EF254 /* iconfont-user.png in Resources */,
+				6E2996051FB5509E009EF254 /* arm-up-right@2x.png in Resources */,
 				6E6E66311FAAC18D00067A14 /* LocationServiceController.xib in Resources */,
 				6EE1EF601FAFEFD000FB55CD /* GraduateColorController.xib in Resources */,
+				6E2996021FB5509E009EF254 /* arm-down-left@2x.png in Resources */,
 				6E9A96341FB18A4000405E1B /* 1.jpg in Resources */,
 				6ECA01641FB3D4E100D5F3A2 /* cat.jpg in Resources */,
 				6ECA01661FB425B400D5F3A2 /* ImageTransformController.xib in Resources */,
+				6E2996041FB5509E009EF254 /* arm-up-left@2x.png in Resources */,
 				6E1213061FA9A9D4007207D1 /* TimerController.xib in Resources */,
+				6E2996061FB5509E009EF254 /* face@2x.png in Resources */,
 				6E9A96391FB18A4000405E1B /* 6.jpg in Resources */,
 				6E9A96381FB18A4000405E1B /* 5.jpg in Resources */,
+				6E2996031FB5509E009EF254 /* arm-down-right@2x.png in Resources */,
 				6E9A96331FB18A4000405E1B /* 0.jpg in Resources */,
+				6E2995F91FB54DC5009EF254 /* AnimLoginViewController.xib in Resources */,
 				6E207D6A1FA71CE600E323EA /* Assets.xcassets in Resources */,
 				6E207DB21FA73C9E00E323EA /* demoList.plist in Resources */,
 				6E114FF61FB00114009AD905 /* DataPickerController.xib in Resources */,
@@ -515,6 +569,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E2995F81FB54DC5009EF254 /* AnimLoginViewController.swift in Sources */,
 				6EBE58021FB1523B007D1348 /* CarouselController.swift in Sources */,
 				6E6E66301FAAC18D00067A14 /* LocationServiceController.swift in Sources */,
 				6E8560571FAE01E600A31BBF /* GraduateColorController.swift in Sources */,
@@ -531,6 +586,7 @@
 				6E3FBAB31FAC557400157CFE /* PreviewController.swift in Sources */,
 				6E207D631FA71CE600E323EA /* AppDelegate.swift in Sources */,
 				6ECA016B1FB43EE400D5F3A2 /* GradientCell.swift in Sources */,
+				6E29960A1FB59023009EF254 /* LoginSuccessController.swift in Sources */,
 				6E1213051FA9A9D4007207D1 /* TimerController.swift in Sources */,
 				6E4A67C71FB2EBD000A30647 /* LTVRefreshControl.swift in Sources */,
 				6E3FBAB01FAC42CE00157CFE /* ThreeDTouchController.swift in Sources */,
