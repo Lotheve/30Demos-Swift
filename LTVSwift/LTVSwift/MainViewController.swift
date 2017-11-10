@@ -14,7 +14,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     lazy var tableMain:UITableView = {
         let table = UITableView()
-        table.frame = CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT)
+        table.frame = CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT - NAVI_BAR_HEIGHT)
         table.backgroundColor = UIColor.lightGray
         table.delegate = self;
         table.dataSource = self;
@@ -29,7 +29,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         self.title = "Swift_30Demo"
         
         let path = Bundle.main.path(forResource: "demoList", ofType: "plist")
-        if path != nil{
+        if path != nil {
             if let content = NSArray(contentsOfFile:path!) {
                 dataSource = content as? [Dictionary<String, String>]
             }

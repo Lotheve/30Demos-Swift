@@ -16,14 +16,12 @@ class LTVLocationManager: NSObject,CLLocationManagerDelegate {
 
     //返回定位坐标的闭包
     var locationFaction:((CLLocationCoordinate2D?) -> Void)?
-    //地理编码的闭包
-    var cpsNameFaction:((String,String,String) -> Void)?
     
     //Location对象
     lazy var _location:CLLocation = {
         let location = CLLocation()
         return location;
-    }();
+    }()
     //manager对象
     lazy var manager : CLLocationManager = {
         let aManager = CLLocationManager()
@@ -32,7 +30,7 @@ class LTVLocationManager: NSObject,CLLocationManagerDelegate {
         aManager.distanceFilter = kCLDistanceFilterNone
         
         return aManager;
-    }();
+    }()
 
     private override init() {
         super.init()
@@ -40,7 +38,7 @@ class LTVLocationManager: NSObject,CLLocationManagerDelegate {
     
     func locate() {
         //手机定位是否开启
-        let isOpen = CLLocationManager.locationServicesEnabled() as Bool
+        let isOpen = CLLocationManager.locationServicesEnabled()
         if isOpen == false {
             UIAlertView(title:"提示", message:"请先打开手机定位", delegate:nil, cancelButtonTitle: "确定").show()
             return;
@@ -50,9 +48,7 @@ class LTVLocationManager: NSObject,CLLocationManagerDelegate {
         //提示授权
         if status == .notDetermined
         {
-            if #available(iOS 8.0, *) {
-                self.manager.requestWhenInUseAuthorization()
-            }
+            self.manager.requestWhenInUseAuthorization()
             return
         }
         //拒绝授权
@@ -67,7 +63,8 @@ class LTVLocationManager: NSObject,CLLocationManagerDelegate {
     // 地理编码
     class func geocodingWith(geo:String, completionHandler:((_ latitude:CLLocationDegrees?,_ longitude:CLLocationDegrees?) -> Void)?){
         
-        CLGeocoder().geocodeAddressString(geo) { (placemarks:[CLPlacemark]?, error:Error?) in
+        CLGeocoder().geocodeAddressString(geo) {
+            (placemarks:[CLPlacemark]?, error:Error?) in
             if error == nil, let placemark = placemarks?.first {
                 if completionHandler != nil {
                     let coordinate:CLLocationCoordinate2D? = placemark.location?.coordinate
@@ -104,12 +101,12 @@ class LTVLocationManager: NSObject,CLLocationManagerDelegate {
     //MARK: - CLLocationManagerDelegate
     //定位成功
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        self.manager.stopUpdatingLocation()
         if let location = locations.first {
             if locationFaction != nil {
                 locationFaction!(location.coordinate)
             }
         }
+        self.manager.stopUpdatingLocation()
     }
     
     //定位失败
@@ -117,5 +114,6 @@ class LTVLocationManager: NSObject,CLLocationManagerDelegate {
         if locationFaction != nil {
             locationFaction!(nil)
         }
+        self.manager.stopUpdatingLocation()
     }
 }

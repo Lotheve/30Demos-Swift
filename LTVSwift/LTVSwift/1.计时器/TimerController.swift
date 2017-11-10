@@ -135,8 +135,7 @@ class TimerController: BaseViewController,UITableViewDataSource,UITableViewDeleg
             status = .end
             //结束计时
             if let _ = timer {
-                timer?.invalidate(
-                )
+                timer!.invalidate()
                 timer = nil
             }
             timeDuration += CACurrentMediaTime()-beginTime

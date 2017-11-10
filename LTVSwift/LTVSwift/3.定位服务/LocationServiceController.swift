@@ -30,7 +30,7 @@ class LocationServiceController: BaseViewController {
     @IBOutlet var geocodingLatitudeLabel: UILabel!
     
     
-    var locationManager:LTVLocationManager?
+    let locationManager = LTVLocationManager.shareManager
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,8 +39,7 @@ class LocationServiceController: BaseViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
 
-        locationManager = LTVLocationManager.shareManager
-        locationManager?.locationFaction = {
+        locationManager.locationFaction = {
             (coordinate:CLLocationCoordinate2D?) in
             
             if coordinate != nil {
@@ -79,7 +78,7 @@ class LocationServiceController: BaseViewController {
     //MARK: - Action
     //定位
     @IBAction func actionLocate(_ sender: UIButton) {
-        locationManager?.locate()
+        locationManager.locate()
     }
     
     //坐标反编码

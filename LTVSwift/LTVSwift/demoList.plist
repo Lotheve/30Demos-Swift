@@ -82,5 +82,13 @@
 		<key>DemoBusiness</key>
 		<string>ImageTransformController</string>
 	</dict>
+	<dict>
+		<key>DemoKey</key>
+		<string>GradientTable</string>
+		<key>DemoItem</key>
+		<string>TableViewCell背景渐变</string>
+		<key>DemoBusiness</key>
+		<string>GradientTableController</string>
+	</dict>
 </array>
 </plist>

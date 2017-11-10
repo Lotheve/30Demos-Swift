@@ -27,11 +27,12 @@ class VideoPlayerController: BaseViewController {
         self.view.addSubview(label)
         
         //定义一个视频文件路径
-        let filePath = Bundle.main.path(forResource: "video", ofType: "mov")
-        let videoURL = URL(fileURLWithPath: filePath!)
-        let player = AVPlayer(url: videoURL)
-        playerViewController = AVPlayerViewController()
-        playerViewController?.player = player
+        if let filePath = Bundle.main.path(forResource: "video", ofType: "mov") {
+            let videoURL = URL(fileURLWithPath: filePath)
+            let player = AVPlayer(url: videoURL)
+            playerViewController = AVPlayerViewController()
+            playerViewController?.player = player
+        }
     }
     
     //MARK: - Action

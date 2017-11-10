@@ -18,6 +18,8 @@ import UIKit
 class ThreeDTouchController: BaseViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerPreviewingDelegate {
     
     var tableMain:LTVTableView?
+    
+    var abee : Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +55,7 @@ class ThreeDTouchController: BaseViewController, UITableViewDelegate, UITableVie
         if cell == nil {
             cell = UITableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: "threeDTouchCellID")
         }
-        cell?.textLabel?.text = "cell - \(indexPath.row)"
+        cell?.textLabel?.text = "使劲 别松手"
         cell?.selectionStyle = .none
         
         //注册预览效果
