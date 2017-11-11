@@ -47,6 +47,14 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NdR-jb-piL">
+                            <rect key="frame" x="171" y="181" width="23" height="19"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="19" id="AOt-XI-8oX"/>
+                                <constraint firstAttribute="width" constant="23" id="pPJ-Gb-t7k"/>
+                            </constraints>
+                        </view>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face.png" translatesAutoresizingMaskIntoConstraints="NO" id="Nb5-ws-RpK">
                             <rect key="frame" x="129.5" y="100" width="116" height="92"/>
                             <constraints>
@@ -96,14 +104,6 @@
                                 <constraint firstAttribute="width" constant="43" id="uud-BH-05u"/>
                             </constraints>
                         </imageView>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NdR-jb-piL">
-                            <rect key="frame" x="171" y="181" width="23" height="19"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="19" id="AOt-XI-8oX"/>
-                                <constraint firstAttribute="width" constant="23" id="pPJ-Gb-t7k"/>
-                            </constraints>
-                        </view>
                     </subviews>
                     <color key="backgroundColor" red="0.18823529411764706" green="0.51372549019607838" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -181,7 +181,7 @@
                                     <rect key="frame" x="50" y="8" width="240" height="34"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     <connections>
                                         <action selector="passwordDidBeginEditing:" destination="-1" eventType="editingDidBegin" id="s8K-Wi-iM5"/>
                                         <action selector="passwordDidEndEditing:" destination="-1" eventType="editingDidEnd" id="TXT-il-8kv"/>

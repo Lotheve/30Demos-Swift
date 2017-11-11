@@ -98,5 +98,13 @@
 		<key>DemoBusiness</key>
 		<string>AnimLoginViewController</string>
 	</dict>
+	<dict>
+		<key>DemoKey</key>
+		<string>CellSideSlip</string>
+		<key>DemoItem</key>
+		<string>Cell 侧滑按钮</string>
+		<key>DemoBusiness</key>
+		<string>CellSideSlipController</string>
+	</dict>
 </array>
 </plist>
