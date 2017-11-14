@@ -56,7 +56,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             cell.contentView.backgroundColor = UIColor.white
             var demoItem:Dictionary<String, String> = dataSource![indexPath.row]
             if let title = demoItem[DEMO_ITEM] {
-                cell.textLabel?.text = title
+                cell.textLabel?.text = "\(indexPath.row + 1). \(title)"
             }
             return cell
         }

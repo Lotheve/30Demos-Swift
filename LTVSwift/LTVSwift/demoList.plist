@@ -106,5 +106,13 @@
 		<key>DemoBusiness</key>
 		<string>CellSideSlipController</string>
 	</dict>
+	<dict>
+		<key>DemoKey</key>
+		<string>ParticleAnimation</string>
+		<key>DemoItem</key>
+		<string>粒子动画</string>
+		<key>DemoBusiness</key>
+		<string>ParticleAnimationController</string>
+	</dict>
 </array>
 </plist>
