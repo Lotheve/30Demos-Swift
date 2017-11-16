@@ -114,5 +114,13 @@
 		<key>DemoBusiness</key>
 		<string>ParticleAnimationController</string>
 	</dict>
+	<dict>
+		<key>DemoKey</key>
+		<string>CoreData</string>
+		<key>DemoItem</key>
+		<string>通讯录（CoreData）</string>
+		<key>DemoBusiness</key>
+		<string>AddressBookController</string>
+	</dict>
 </array>
 </plist>

@@ -21,8 +21,8 @@ class ParticleAnimationController: BaseViewController {
     
     func firework() {
         
+        //粒子发射器图层
         let fireworkEmitter = CAEmitterLayer()
-
         //发射源位置
         fireworkEmitter.emitterPosition = CGPoint(x: SCREEN_WIDTH/2, y: SCREEN_HEIGHT-200)
         //发射源大小
@@ -87,6 +87,7 @@ class ParticleAnimationController: BaseViewController {
         // burst由rocket发射（在rocket的生命周期内根据birthRate发射）
         // spark由burst发射（在burst的生命周期内根据birthRate发射）
         // 以rocket发射burst为例，burst的color、scale继承自rocket
+        // refer to : https://developer.apple.com/documentation/quartzcore/caemittercell/1521866-emittercells
         fireworkEmitter.emitterCells = [rocket]
         rocket.emitterCells = [burst]
         burst.emitterCells = [spark]
