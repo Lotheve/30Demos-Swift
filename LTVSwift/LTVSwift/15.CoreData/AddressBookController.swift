@@ -9,7 +9,7 @@
 import UIKit
 
 class AddressBookController: BaseViewController {
-    
+
     var contacts:[ContactModel] = []
     
     lazy var tableMain:UITableView = {
@@ -35,27 +35,27 @@ class AddressBookController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        if #available(iOS 10, *) {
+        print(NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true))
+        
+        if #available(iOS 10, *) {
             self.loadData()
-            
             self.view.addSubview(tableMain)
-            
             let addItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(actionAddContact));
             self.navigationItem.rightBarButtonItem = addItem
-//        }else{
-//
-//        }
+        }else{
+            self.view.addSubview(remindLabel)
+        }
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         
-//        if #available(iOS 10, *) {
+        if #available(iOS 10, *) {
             tableMain.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height)
-//        }else{
-//            remindLabel.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 40)
-//            remindLabel.center = view.center
-//        }
+        }else{
+            remindLabel.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 40)
+            remindLabel.center = view.center
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -67,19 +67,28 @@ class AddressBookController: BaseViewController {
         let gentleMan = ContactModel(avatar: UIImagePNGRepresentation(UIImage(named: "gentleman.png")!), name: "Lotheve", phone: "18658331225")
         contacts.append(apple)
         contacts.append(gentleMan)
+        
+        if #available(iOS 10.0, *) {
+            let localContacts = ContactModel.queryAll()
+            contacts += localContacts
+        }
     }
     
     @objc func actionAddContact() {
-        let contactAddVC = ContactAddController {
+        let contactAddVC = ContactAddController(businessType: .add, contact: nil) {
             (contact) in
             print(contact)
+            if #available(iOS 10.0, *) {
+                ContactModel.add(contact: contact)
+                self.contacts.append(contact)
+                self.tableMain.reloadData()
+            }
         }
         self.show(contactAddVC, sender: nil)
     }
 }
 
-
-extension AddressBookController: UITableViewDataSource, UITableViewDelegate {
+extension AddressBookController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
@@ -96,5 +105,39 @@ extension AddressBookController: UITableViewDataSource, UITableViewDelegate {
         cell.nameLabel.text = contact.name
         cell.phoneLabel.text = contact.phone
         return cell
+    }
+}
+
+extension AddressBookController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        if #available(iOS 10.0, *) {
+            let deleteAction = UITableViewRowAction(style: .destructive, title: "删除") { (action, indexPath) in
+                let contact = self.contacts[indexPath.row]
+                self.contacts.remove(at: indexPath.row)
+                ContactModel.delete(contact: contact)
+                self.tableMain.reloadData()
+            }
+            return [deleteAction]
+        } else {
+            return nil
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if #available(iOS 10.0, *) {
+            tableView.deselectRow(at: indexPath, animated: true)
+
+            let contact = self.contacts[indexPath.row]
+            let contactAddVC = ContactAddController(businessType: .update, contact: contact) {
+                (contact) in
+                print(contact)
+                let oldContact = self.contacts[indexPath.row]
+                self.contacts[indexPath.row] = contact
+                ContactModel.update(contact: oldContact, withNew: contact)
+                self.tableMain.reloadRows(at: [indexPath], with: .fade)
+            }
+            self.show(contactAddVC, sender: nil)
+        }
     }
 }

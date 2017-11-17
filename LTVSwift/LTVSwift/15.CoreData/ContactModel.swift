@@ -10,39 +10,95 @@ import Foundation
 import UIKit
 import CoreData
 
+let entityName = "Contact"
+
+let key_avatar = "avatar"
+let key_name = "name"
+let key_tel = "tel"
 
 struct ContactModel {
     var avatar:Data?
     var name:String!
     var phone:String!
     
-//    static var persistentContainer: NSPersistentContainer = {
-//        let container = NSPersistentContainer(name: "AddressBook")
-//        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-//            if let error = error as NSError? {
-//                // Replace this implementation with code to handle the error appropriately.
-//                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-//                
-//                /*
-//                 Typical reasons for an error here include:
-//                 * The parent directory does not exist, cannot be created, or disallows writing.
-//                 * The persistent store is not accessible, due to permissions or data protection when the device is locked.
-//                 * The device is out of space.
-//                 * The store could not be migrated to the current model version.
-//                 Check the error message to determine what the actual problem was.
-//                 */
-//                fatalError("Unresolved error \(error), \(error.userInfo)")
-//            }
-//        })
-//        return container
-//    }()
-    
-    static func queryContacts() -> [ContactModel] {
-
-        return []
+    @available(iOS 10.0, *)
+    static func query(withPredicate predicate: NSPredicate?) -> [ContactModel] {
+        if let fetchedResults = CoreDataManager.shareManager.query(withEntityName: entityName, predicate: predicate) {
+            
+            var contacts:[ContactModel] = []
+            
+            for result in fetchedResults {
+                let avatar = result.value(forKey: key_avatar) as? Data
+                let name = result.value(forKey: key_name) as? String
+                let phone = result.value(forKey: key_tel) as? String
+                if let name = name, let phone = phone{
+                    let contact = ContactModel.init(avatar: avatar, name: name, phone: phone)
+                    contacts.append(contact)
+                }
+            }
+            return contacts
+        }else{
+            return []
+        }
     }
     
-    static func addContact(_ contact:ContactModel) {
+    @available(iOS 10.0, *)
+    static func queryAll() -> [ContactModel] {
+        return self.query(withPredicate: nil)
+    }
+    
+    @available(iOS 10.0, *)
+    static func add(contact: ContactModel) {
         
+        //获取context
+        let managedObectContext = CoreDataManager.shareManager.persistentContainer.viewContext
+        //建立Entity对象
+        let entity = NSEntityDescription.entity(forEntityName: entityName, in: managedObectContext)
+        //新建一个managedObject
+        let contactObj = NSManagedObject(entity: entity!, insertInto: managedObectContext)
+        contactObj.setValue(contact.avatar, forKey: key_avatar)
+        contactObj.setValue(contact.name, forKey: key_name)
+        contactObj.setValue(contact.phone, forKey: key_tel)
+        //保存数据
+        CoreDataManager.shareManager.save()
+    }
+    
+    @available(iOS 10.0, *)
+    static func update(contact: ContactModel, withNew newContact: ContactModel) {
+        
+        //创建谓词
+        let name = contact.name
+        let tel = contact.phone
+        let predicate = NSPredicate(format: "name = %@ AND tel = %@", name!,tel!)
+        
+        if let fetchedResults = CoreDataManager.shareManager.query(withEntityName: entityName, predicate: predicate) {
+            let avatar = newContact.avatar
+            let name = newContact.name
+            let tel = newContact.phone
+
+            for result in fetchedResults {
+                result.setValue(avatar, forKey: key_avatar)
+                result.setValue(name, forKey: key_name)
+                result.setValue(tel, forKey: key_tel)
+            }
+        }
+        //保存数据
+        CoreDataManager.shareManager.save()
+    }
+    
+    @available(iOS 10.0, *)
+    static func delete(contact: ContactModel) {
+        
+        let name = contact.name
+        let tel = contact.phone
+        let predicate = NSPredicate(format: "name = %@ AND tel = %@", name!,tel!)
+        
+        if let fetchedResults = CoreDataManager.shareManager.query(withEntityName: entityName, predicate: predicate) {
+            for result in fetchedResults {
+                CoreDataManager.shareManager.delete(object: result)
+            }
+        }
+        //保存修改
+        CoreDataManager.shareManager.save()
     }
 }

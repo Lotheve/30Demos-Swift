@@ -8,7 +8,8 @@
 
 import UIKit
 
-typealias Added = (_ contact: ContactModel) -> Void
+typealias CompletedFunc = (_ contact: ContactModel) -> Void
+
 
 class ContactAddController: BaseViewController {
 
@@ -17,11 +18,22 @@ class ContactAddController: BaseViewController {
     @IBOutlet var telTF: UITextField!
     @IBOutlet var addButton: UIButton!
     
-    var contactAdded:Added?
+    enum BusinessType {
+        case add
+        case update
+    }
     
-    convenience init(added: @escaping Added) {
+    var businessType = BusinessType.add
+    var contact:ContactModel?
+    var completion:CompletedFunc?
+    
+    convenience init(businessType:BusinessType?, contact:ContactModel?, completion: @escaping CompletedFunc) {
         self.init(nibName: "\(type(of: self))", bundle: nil)
-        self.contactAdded = added
+        if let businessType = businessType {
+            self.businessType = businessType
+        }
+        self.contact = contact
+        self.completion = completion
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -36,11 +48,26 @@ class ContactAddController: BaseViewController {
         super.viewDidLoad()
         self.addEndEditGesture()
 
-        self.title = "添加联系人"
+        if businessType == .add {
+            self.title = "添加联系人"
+            self.addButton.setTitle("Add", for: .normal)
+        } else {
+            self.title = "更新联系信息"
+            self.addButton.setTitle("Update", for: .normal)
+        }
         
         self.addButton.layer.cornerRadius = 5.0
         self.avatar.layer.masksToBounds = true
         self.avatar.layer.cornerRadius = self.avatar.bounds.width/2.0
+        
+        if let contact = self.contact {
+            if contact.avatar != nil {
+                let image = UIImage(data: contact.avatar!)
+                self.avatar.image = image
+            }
+            self.contactTF.text = contact.name
+            self.telTF.text = contact.phone
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,7 +82,7 @@ class ContactAddController: BaseViewController {
     
     @IBAction func actionAdd(_ sender: UIButton) {
         if self.contactTF.text == nil || self.contactTF.text?.count == 0 {
-            UIAlertView.init(title: nil, message: "ContactModel is empty！", delegate: nil, cancelButtonTitle: "got it").show()
+            UIAlertView.init(title: nil, message: "name is empty！", delegate: nil, cancelButtonTitle: "got it").show()
             return
         }
         if self.telTF.text == nil || self.telTF.text?.count == 0 {
@@ -63,8 +90,8 @@ class ContactAddController: BaseViewController {
             return
         }
         let contact = ContactModel(avatar:UIImagePNGRepresentation(avatar.image!), name: self.contactTF.text, phone: self.telTF.text)
-        if self.contactAdded != nil {
-            self.contactAdded!(contact)
+        if self.completion != nil {
+            self.completion!(contact)
         }
         self.navigationController?.popViewController(animated: true)
     }
