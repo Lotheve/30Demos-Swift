@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         
-        window = UIWindow()
+        window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = UIColor.lightGray
         let mainVC = MainViewController()
         let navc = UINavigationController(rootViewController: mainVC)

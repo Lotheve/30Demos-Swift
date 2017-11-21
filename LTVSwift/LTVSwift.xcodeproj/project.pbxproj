@@ -85,6 +85,10 @@
 		6E9A963E1FB18B2D00405E1B /* CarouselLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9A963D1FB18B2D00405E1B /* CarouselLayout.swift */; };
 		6E9A967B1FB28A0500405E1B /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9A967A1FB28A0500405E1B /* CameraController.swift */; };
 		6E9A967F1FB2DBEB00405E1B /* RefreshActionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9A967E1FB2DBEB00405E1B /* RefreshActionController.swift */; };
+		6EB400341FC2691700172174 /* SmoothNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB400331FC2691700172174 /* SmoothNavController.swift */; };
+		6EB400361FC2698B00172174 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB400351FC2698B00172174 /* PersonalViewController.swift */; };
+		6EB400381FC2772B00172174 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB400371FC2772B00172174 /* ListViewController.swift */; };
+		6EB4003A1FC2C91100172174 /* PersonalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EB400391FC2C91100172174 /* PersonalViewController.xib */; };
 		6EBE58021FB1523B007D1348 /* CarouselController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE58011FB1523B007D1348 /* CarouselController.swift */; };
 		6ECA01641FB3D4E100D5F3A2 /* cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6ECA01631FB3D4E100D5F3A2 /* cat.jpg */; };
 		6ECA01661FB425B400D5F3A2 /* ImageTransformController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ECA01651FB425B400D5F3A2 /* ImageTransformController.xib */; };
@@ -196,6 +200,10 @@
 		6E9A963D1FB18B2D00405E1B /* CarouselLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselLayout.swift; sourceTree = "<group>"; };
 		6E9A967A1FB28A0500405E1B /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		6E9A967E1FB2DBEB00405E1B /* RefreshActionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshActionController.swift; sourceTree = "<group>"; };
+		6EB400331FC2691700172174 /* SmoothNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoothNavController.swift; sourceTree = "<group>"; };
+		6EB400351FC2698B00172174 /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
+		6EB400371FC2772B00172174 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		6EB400391FC2C91100172174 /* PersonalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalViewController.xib; sourceTree = "<group>"; };
 		6EBE58011FB1523B007D1348 /* CarouselController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselController.swift; sourceTree = "<group>"; };
 		6ECA01631FB3D4E100D5F3A2 /* cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat.jpg; sourceTree = "<group>"; };
 		6ECA01651FB425B400D5F3A2 /* ImageTransformController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTransformController.xib; sourceTree = "<group>"; };
@@ -294,6 +302,7 @@
 				6E5F00031FB6A5160075E71B /* 13.TableViewCell侧滑按钮 */,
 				6E6227A41FB948E90087AC1D /* 14.粒子动画 */,
 				6E6325551FBA96630046171F /* 15.CoreData */,
+				6EB400321FC267A200172174 /* 16.导航栏平滑切换 */,
 				6E207D691FA71CE600E323EA /* Assets.xcassets */,
 				6E207D6B1FA71CE600E323EA /* LaunchScreen.storyboard */,
 				6E207D6E1FA71CE600E323EA /* Info.plist */,
@@ -502,6 +511,17 @@
 			path = "9.下拉刷新";
 			sourceTree = "<group>";
 		};
+		6EB400321FC267A200172174 /* 16.导航栏平滑切换 */ = {
+			isa = PBXGroup;
+			children = (
+				6EB400331FC2691700172174 /* SmoothNavController.swift */,
+				6EB400351FC2698B00172174 /* PersonalViewController.swift */,
+				6EB400391FC2C91100172174 /* PersonalViewController.xib */,
+				6EB400371FC2772B00172174 /* ListViewController.swift */,
+			);
+			path = "16.导航栏平滑切换";
+			sourceTree = "<group>";
+		};
 		6ECA01671FB4375100D5F3A2 /* 11.TableViewCell背景渐变 */ = {
 			isa = PBXGroup;
 			children = (
@@ -638,6 +658,7 @@
 				6E9A96351FB18A4000405E1B /* 2.jpg in Resources */,
 				6E52B9DB1FB034D8007FBCB3 /* area.plist in Resources */,
 				6E2996081FB5509E009EF254 /* iconfont-user.png in Resources */,
+				6EB4003A1FC2C91100172174 /* PersonalViewController.xib in Resources */,
 				6E2996051FB5509E009EF254 /* arm-up-right@2x.png in Resources */,
 				6E6E66311FAAC18D00067A14 /* LocationServiceController.xib in Resources */,
 				6EE1EF601FAFEFD000FB55CD /* GraduateColorController.xib in Resources */,
@@ -703,6 +724,7 @@
 				6E71B0D61FAAB2C900710A45 /* VideoPlayerController.swift in Sources */,
 				6E114FF51FB00114009AD905 /* DataPickerController.swift in Sources */,
 				6ECA01691FB437F600D5F3A2 /* GradientTableController.swift in Sources */,
+				6EB400341FC2691700172174 /* SmoothNavController.swift in Sources */,
 				6E3025FA1FAC68D1005634DF /* LTVTableView.swift in Sources */,
 				6E9A963E1FB18B2D00405E1B /* CarouselLayout.swift in Sources */,
 				6E1213021FA9A0D8007207D1 /* BaseViewController.swift in Sources */,
@@ -710,8 +732,10 @@
 				6E114FF81FB00726009AD905 /* DatePickerView.swift in Sources */,
 				6E3FBAB31FAC557400157CFE /* PreviewController.swift in Sources */,
 				6E207D631FA71CE600E323EA /* AppDelegate.swift in Sources */,
+				6EB400361FC2698B00172174 /* PersonalViewController.swift in Sources */,
 				6ECA016B1FB43EE400D5F3A2 /* GradientCell.swift in Sources */,
 				6E29960A1FB59023009EF254 /* LoginSuccessController.swift in Sources */,
+				6EB400381FC2772B00172174 /* ListViewController.swift in Sources */,
 				6E1213051FA9A9D4007207D1 /* TimerController.swift in Sources */,
 				6E3ACC391FBD7B8D0029BDFD /* AddressBook.xcdatamodeld in Sources */,
 				6E4A67C71FB2EBD000A30647 /* LTVRefreshControl.swift in Sources */,

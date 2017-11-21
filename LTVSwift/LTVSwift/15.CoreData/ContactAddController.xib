@@ -24,7 +24,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar.png" translatesAutoresizingMaskIntoConstraints="NO" id="KPv-Nq-hxi">
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gentleman.png" translatesAutoresizingMaskIntoConstraints="NO" id="KPv-Nq-hxi">
                     <rect key="frame" x="112.5" y="20" width="150" height="150"/>
                     <gestureRecognizers/>
                     <constraints>
@@ -107,6 +107,6 @@
         </tapGestureRecognizer>
     </objects>
     <resources>
-        <image name="avatar.png" width="300" height="300"/>
+        <image name="gentleman.png" width="200" height="200"/>
     </resources>
 </document>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImageTransformController: BaseViewController, UIGestureRecognizerDelegate {
+class ImageTransformController: BaseViewController {
     
     var pinchBegintransform:CGAffineTransform = CGAffineTransform.identity
     var rotationBegintransform:CGAffineTransform = CGAffineTransform.identity

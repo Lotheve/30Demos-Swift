@@ -122,5 +122,13 @@
 		<key>DemoBusiness</key>
 		<string>AddressBookController</string>
 	</dict>
+	<dict>
+		<key>DemoKey</key>
+		<string>SmoothNav</string>
+		<key>DemoItem</key>
+		<string>平滑切换导航栏</string>
+		<key>DemoBusiness</key>
+		<string>SmoothNavController</string>
+	</dict>
 </array>
 </plist>

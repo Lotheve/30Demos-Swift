@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +18,13 @@ class BaseViewController: UIViewController {
         let leftBarItem = UIBarButtonItem(title: "返回", style: .plain, target: self, action:#selector(actionBack))
         leftBarItem.tintColor = UIColor.black
         self.navigationItem.leftBarButtonItem = leftBarItem
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if self.navigationController != nil {
+            self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        }
     }
     
     @objc func actionBack() -> Void {

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PersonalViewController" customModule="LTVSwift" customModuleProvider="target">
+            <connections>
+                <outlet property="imageAvatar" destination="lKh-yZ-IIM" id="dZp-Uz-iFV"/>
+                <outlet property="imageTop" destination="aBF-Xv-TbD" id="ylP-8j-9aU"/>
+                <outlet property="tableMain" destination="67f-im-Dhe" id="EGs-4R-23P"/>
+                <outlet property="view" destination="1ha-rY-Kwf" id="sUd-pp-3XO"/>
+                <outlet property="viewTop" destination="XBg-0W-vfu" id="dDe-6d-Vmg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1ha-rY-Kwf">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="67f-im-Dhe">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="67f-im-Dhe" firstAttribute="top" secondItem="1ha-rY-Kwf" secondAttribute="top" id="2ND-tU-cWy"/>
+                <constraint firstAttribute="trailing" secondItem="67f-im-Dhe" secondAttribute="trailing" id="C1R-Vj-5BV"/>
+                <constraint firstAttribute="bottom" secondItem="67f-im-Dhe" secondAttribute="bottom" id="VCb-MF-vog"/>
+                <constraint firstItem="67f-im-Dhe" firstAttribute="leading" secondItem="1ha-rY-Kwf" secondAttribute="leading" id="izf-Er-IDv"/>
+            </constraints>
+            <point key="canvasLocation" x="-19.5" y="123.5"/>
+        </view>
+        <view tag="1001" contentMode="scaleToFill" id="XBg-0W-vfu">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="279"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aBF-Xv-TbD">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="279"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gentleman.png" translatesAutoresizingMaskIntoConstraints="NO" id="lKh-yZ-IIM">
+                    <rect key="frame" x="112" y="49.5" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="Hti-4i-am9"/>
+                        <constraint firstAttribute="height" constant="150" id="xiQ-eZ-Jrz"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lotheve" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4W-wk-seq">
+                    <rect key="frame" x="131.5" y="221" width="111" height="38"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.18900617959999999" green="0.51427143809999998" blue="0.79067879919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="aBF-Xv-TbD" firstAttribute="top" secondItem="XBg-0W-vfu" secondAttribute="top" id="0Bz-ID-nBx"/>
+                <constraint firstItem="H4W-wk-seq" firstAttribute="centerX" secondItem="XBg-0W-vfu" secondAttribute="centerX" id="2de-bu-JPy"/>
+                <constraint firstItem="lKh-yZ-IIM" firstAttribute="top" secondItem="XBg-0W-vfu" secondAttribute="top" constant="49.5" id="5HG-iO-73h"/>
+                <constraint firstItem="aBF-Xv-TbD" firstAttribute="leading" secondItem="XBg-0W-vfu" secondAttribute="leading" id="TfQ-8f-PiJ"/>
+                <constraint firstAttribute="bottom" secondItem="aBF-Xv-TbD" secondAttribute="bottom" id="UGF-n6-OdG"/>
+                <constraint firstItem="lKh-yZ-IIM" firstAttribute="centerX" secondItem="XBg-0W-vfu" secondAttribute="centerX" id="daG-D5-IHo"/>
+                <constraint firstAttribute="bottom" secondItem="H4W-wk-seq" secondAttribute="bottom" constant="20" id="nze-Ev-4q7"/>
+                <constraint firstAttribute="trailing" secondItem="aBF-Xv-TbD" secondAttribute="trailing" id="rBr-Jv-CFP"/>
+                <constraint firstItem="H4W-wk-seq" firstAttribute="top" secondItem="lKh-yZ-IIM" secondAttribute="bottom" constant="21.5" id="vDG-IM-dmb"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-450.5" y="98.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="gentleman.png" width="200" height="200"/>
+    </resources>
+</document>
