@@ -14,7 +14,7 @@ class ListViewController: BaseViewController {
     
     lazy var tableMain: UITableView = {
         let table = UITableView()
-        table.frame = CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT)
+        table.frame = CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT - NAVI_BAR_HEIGHT)
         table.delegate = self
         table.dataSource = self
         table.showsVerticalScrollIndicator = false
@@ -23,7 +23,6 @@ class ListViewController: BaseViewController {
         table.register(UITableViewCell.self, forCellReuseIdentifier: CELLID)
         return table
     }()
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()

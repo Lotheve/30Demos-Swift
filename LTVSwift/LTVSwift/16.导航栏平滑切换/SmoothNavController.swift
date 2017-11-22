@@ -6,12 +6,16 @@
 //  Copyright © 2017年 Lotheve. All rights reserved.
 //
 
+/*
+ 1.若直接隐藏导航栏，切换过程无法平滑过渡，会产生导航栏的隔断
+ 2.若设置导航栏透明度为0，导航栏上的按钮也会透明
+ 3.因此思路是切换过程中逐渐改变导航栏中相关背景视图的透明度，而非整个导航栏
+ 4.按照这个思路，每个控制器应当有自己的属性控制导航栏透明度，然而同一栈中控制器的导航栏是全局的，因此需要给控制器扩展一个属性记录导航栏的透明度
+ */
+
 import UIKit
 
 class SmoothNavController: BaseViewController, UINavigationControllerDelegate {
-
-    var originNavColor:UIColor?
-    var originTranslucent:Bool?
     
     lazy var tipLabel: UILabel = {
         let label = UILabel()
@@ -25,10 +29,13 @@ class SmoothNavController: BaseViewController, UINavigationControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //导航栏非透明（isTranslucent=false）的情况下从屏幕左上角开始布局
+        self.extendedLayoutIncludesOpaqueBars = true
+        self.edgesForExtendedLayout = .top
+        
         self.view.backgroundColor = UIColor.white
         
-        self.navigationController?.navigationBar.barTintColor = UIColor.lightGray
-        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.barTintColor = UIColor.red
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
         let pushItem = UIBarButtonItem(title: "个人", style: .plain, target: self, action: #selector(actionPush))
@@ -39,16 +46,14 @@ class SmoothNavController: BaseViewController, UINavigationControllerDelegate {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        tipLabel.bounds = CGRect(x: 0, y: 0, width: self.view.frame.width-100, height: self.view.frame.height)
-        tipLabel.center = self.view.center
+        tipLabel.frame = CGRect(x: 0, y: NAVI_BAR_HEIGHT, width: self.view.frame.width, height: self.view.frame.height - NAVI_BAR_HEIGHT)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
+
         if let isPush = self.navigationController?.viewControllers.contains(self), !isPush {
             self.navigationController?.navigationBar.barTintColor = UIColor.white
-            self.navigationController?.navigationBar.isTranslucent = false
             self.navigationController?.navigationBar.tintColor = UIColor.black
         }
     }

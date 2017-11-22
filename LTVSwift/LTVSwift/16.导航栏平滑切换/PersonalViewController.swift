@@ -10,7 +10,7 @@ import UIKit
 
 fileprivate let CELLID = "PersonalCellID"
 
-class PersonalViewController: BaseViewController {
+class PersonalViewController: BaseViewController, UINavigationControllerDelegate {
     
     @IBOutlet var tableMain: UITableView!
     
@@ -21,16 +21,18 @@ class PersonalViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //导航栏非透明（isTranslucent=false）的情况下从屏幕左上角开始布局
+        self.extendedLayoutIncludesOpaqueBars = true
+        self.edgesForExtendedLayout = .top
+        
         if #available(iOS 11, *) {
             self.tableMain.contentInsetAdjustmentBehavior = .never
         } else {
             self.automaticallyAdjustsScrollViewInsets = false
         }
-        
+
         let pushItem = UIBarButtonItem(title: "详情", style: .plain, target: self, action: #selector(actionPush))
         self.navigationItem.rightBarButtonItem = pushItem
-        
-        self.view.backgroundColor = UIColor.white
         
         self.imageAvatar.layer.masksToBounds = true
         self.imageAvatar.layer.cornerRadius = self.imageAvatar.bounds.width/2.0
@@ -43,11 +45,12 @@ class PersonalViewController: BaseViewController {
         
         self.view.addSubview(viewTop)
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navBarBgAlpha = 0
     }
-    
+
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         
@@ -79,9 +82,6 @@ extension PersonalViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        
-        
     }
 }
 

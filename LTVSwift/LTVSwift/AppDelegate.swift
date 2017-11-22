@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.backgroundColor = UIColor.lightGray
+        window?.backgroundColor = UIColor.black
         let mainVC = MainViewController()
         let navc = UINavigationController(rootViewController: mainVC)
         navc.navigationBar.isTranslucent = false
