@@ -18,7 +18,7 @@ let DEME_BUSINESS = "DemoBusiness"
 let SCREEN_WIDTH = UIScreen.main.bounds.size.width
 let SCREEN_HEIGHT = UIScreen.main.bounds.size.height
 
-//TODO: - 适配iPhoneX
-let NAVI_BAR_HEIGHT = CGFloat(64.0)
+let iPhone_X = (SCREEN_WIDTH == 375 && SCREEN_HEIGHT == 812 ? true : false)
+let NAVI_BAR_HEIGHT:CGFloat = iPhone_X ? 88.0 : 64.0
 
 

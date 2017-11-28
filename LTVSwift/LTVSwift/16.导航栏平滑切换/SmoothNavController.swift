@@ -11,6 +11,8 @@
  2.若设置导航栏透明度为0，导航栏上的按钮也会透明
  3.因此思路是切换过程中逐渐改变导航栏中相关背景视图的透明度，而非整个导航栏
  4.按照这个思路，每个控制器应当有自己的属性控制导航栏透明度，然而同一栈中控制器的导航栏是全局的，因此需要给控制器扩展一个属性记录导航栏的透明度
+ 5.右划手势返回的过程中，通过hook导航栏控制器的_updateInteractiveTransition方法监听手势滑动，时时修改导航栏背景透明度
+ 6.手势滑动过程中释放的情况下，导航栏自动复位，上述方法无法调用，会导致复位后导航栏背景透明度保持与手势释放的时刻一致。通过
  */
 
 import UIKit
@@ -29,15 +31,17 @@ class SmoothNavController: BaseViewController, UINavigationControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //导航栏非透明（isTranslucent=false）的情况下从屏幕左上角开始布局
-        self.extendedLayoutIncludesOpaqueBars = true
-        self.edgesForExtendedLayout = .top
+//        //导航栏非透明（isTranslucent=false）的情况下从屏幕左上角开始布局
+//        self.extendedLayoutIncludesOpaqueBars = true
+//        self.edgesForExtendedLayout = .top
         
         self.view.backgroundColor = UIColor.white
+
+        self.navBarTintColor = UIColor.purple
         
-        self.navigationController?.navigationBar.barTintColor = UIColor.red
         self.navigationController?.navigationBar.tintColor = UIColor.white
-        
+        self.navigationController?.navigationBar.isTranslucent = true
+
         let pushItem = UIBarButtonItem(title: "个人", style: .plain, target: self, action: #selector(actionPush))
         self.navigationItem.rightBarButtonItem = pushItem
         
@@ -53,8 +57,9 @@ class SmoothNavController: BaseViewController, UINavigationControllerDelegate {
         super.viewWillDisappear(animated)
 
         if let isPush = self.navigationController?.viewControllers.contains(self), !isPush {
-            self.navigationController?.navigationBar.barTintColor = UIColor.white
             self.navigationController?.navigationBar.tintColor = UIColor.black
+            self.navBarTintColor = UIColor.white
+            self.navigationController?.navigationBar.isTranslucent = false
         }
     }
     

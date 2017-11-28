@@ -9,6 +9,8 @@
 import UIKit
 
 fileprivate let CELLID = "PersonalCellID"
+fileprivate let TOP_VIEW_HEIGHT: CGFloat = 280.0
+fileprivate let MAX_STRECTH_HEIGHT: CGFloat = 100.0
 
 class PersonalViewController: BaseViewController, UINavigationControllerDelegate {
     
@@ -21,9 +23,8 @@ class PersonalViewController: BaseViewController, UINavigationControllerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //导航栏非透明（isTranslucent=false）的情况下从屏幕左上角开始布局
-        self.extendedLayoutIncludesOpaqueBars = true
-        self.edgesForExtendedLayout = .top
+        self.navBarBgAlpha = 0
+        self.navBarTintColor = UIColor.purple
         
         if #available(iOS 11, *) {
             self.tableMain.contentInsetAdjustmentBehavior = .never
@@ -48,7 +49,6 @@ class PersonalViewController: BaseViewController, UINavigationControllerDelegate
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.navBarBgAlpha = 0
     }
 
     override func viewWillLayoutSubviews() {
@@ -56,7 +56,7 @@ class PersonalViewController: BaseViewController, UINavigationControllerDelegate
         
         let frame = self.view.frame
         viewTop.frame = CGRect(x: 0, y: 0, width: frame.width, height: 280)
-        tableMain.contentInset = UIEdgeInsetsMake(280, 0, 0, 0)
+        tableMain.contentInset = UIEdgeInsetsMake(TOP_VIEW_HEIGHT, 0, 0, 0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -85,3 +85,16 @@ extension PersonalViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
+extension PersonalViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let contentOffset = scrollView.contentOffset
+        if contentOffset.y < -TOP_VIEW_HEIGHT && contentOffset.y > -(TOP_VIEW_HEIGHT + MAX_STRECTH_HEIGHT) {
+            var frame = viewTop.frame
+            frame.size.height = -contentOffset.y
+            viewTop.frame = frame
+        } else if contentOffset.y <= -(TOP_VIEW_HEIGHT + MAX_STRECTH_HEIGHT) {
+            tableMain.contentOffset = CGPoint(x: 0, y: -(TOP_VIEW_HEIGHT + MAX_STRECTH_HEIGHT))
+        }
+    }
+}
