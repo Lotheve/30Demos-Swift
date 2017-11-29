@@ -81,9 +81,18 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                 guard let classType = aClass as? UIViewController.Type else {
                     return
                 }
-                let vc = classType.init()
-                vc.title = demoItem[DEMO_ITEM]
-                self.show(vc, sender: nil)
+
+                var vc: UIViewController? = nil
+                if let _ = Bundle.main.path(forResource: business, ofType: "nib") {
+                    vc = classType.init(nibName: business, bundle: nil)
+                } else {
+                    vc = classType.init()
+                }
+                
+                if vc != nil {
+                    vc!.title = demoItem[DEMO_ITEM]
+                    self.show(vc!, sender: nil)
+                }
             }
         }
     }

@@ -56,7 +56,6 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
 extension ListViewController: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print(scrollView.contentOffset)
         
         let contentOffset = scrollView.contentOffset
         if contentOffset.y >= NAV_SHOW_Y - NAVI_BAR_HEIGHT && contentOffset.y <= NAV_SHOW_Y - NAVI_BAR_HEIGHT + NAV_TRANSFORM_HEIGHT {

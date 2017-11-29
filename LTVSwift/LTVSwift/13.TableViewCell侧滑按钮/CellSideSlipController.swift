@@ -66,7 +66,6 @@ extension CellSideSlipController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let actionDelete = UITableViewRowAction(style: .default, title: "删除") { (action, indexPath) in
             self.dataSource.remove(at: indexPath.row)
-            print(self.dataSource)
             self.tableMain.reloadData()
         }
     
@@ -80,7 +79,6 @@ extension CellSideSlipController: UITableViewDelegate {
             var item = self.dataSource[indexPath.row]
             item.isMark = !item.isMark
             self.dataSource[indexPath.row] = item
-            print(self.dataSource)
             self.tableMain.reloadRows(at: [indexPath], with: .fade)
         }
         actionMark.backgroundColor = UIColor.orange

@@ -36,11 +36,7 @@ class SmoothNavController: BaseViewController, UINavigationControllerDelegate {
 //        self.edgesForExtendedLayout = .top
         
         self.view.backgroundColor = UIColor.white
-
         self.navBarTintColor = UIColor.purple
-        
-        self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationController?.navigationBar.isTranslucent = true
 
         let pushItem = UIBarButtonItem(title: "个人", style: .plain, target: self, action: #selector(actionPush))
         self.navigationItem.rightBarButtonItem = pushItem
@@ -52,13 +48,19 @@ class SmoothNavController: BaseViewController, UINavigationControllerDelegate {
         super.viewWillLayoutSubviews()
         tipLabel.frame = CGRect(x: 0, y: NAVI_BAR_HEIGHT, width: self.view.frame.width, height: self.view.frame.height - NAVI_BAR_HEIGHT)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.isTranslucent = true
+        
+    }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-
+        
         if let isPush = self.navigationController?.viewControllers.contains(self), !isPush {
             self.navigationController?.navigationBar.tintColor = UIColor.black
-            self.navBarTintColor = UIColor.white
             self.navigationController?.navigationBar.isTranslucent = false
         }
     }
