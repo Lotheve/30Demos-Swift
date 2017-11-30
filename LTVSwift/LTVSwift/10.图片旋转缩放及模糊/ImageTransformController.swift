@@ -72,10 +72,6 @@ class ImageTransformController: BaseViewController {
         self.view.addSubview(catView)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
     //MARK: - Actions
     @objc func actionPinch(_ gestureRecognizer:UIGestureRecognizer) {
         

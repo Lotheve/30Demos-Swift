@@ -29,10 +29,6 @@ class CarouselController: BaseViewController, UICollectionViewDataSource, UIColl
         
         self.view.addSubview(collectionView)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10

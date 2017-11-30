@@ -24,8 +24,4 @@ class LoginSuccessController: BaseViewController {
         self.view.addSubview(label)
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 }

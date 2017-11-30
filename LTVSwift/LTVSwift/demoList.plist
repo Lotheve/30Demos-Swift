@@ -130,5 +130,13 @@
 		<key>DemoBusiness</key>
 		<string>SmoothNavController</string>
 	</dict>
+	<dict>
+		<key>DemoKey</key>
+		<string>Search</string>
+		<key>DemoItem</key>
+		<string>搜索</string>
+		<key>DemoBusiness</key>
+		<string>BookListViewController</string>
+	</dict>
 </array>
 </plist>

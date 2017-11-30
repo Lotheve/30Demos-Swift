@@ -32,10 +32,6 @@ class CellSideSlipController: BaseViewController {
         }
         self.view.addSubview(tableMain)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 }
 
 extension CellSideSlipController: UITableViewDataSource {

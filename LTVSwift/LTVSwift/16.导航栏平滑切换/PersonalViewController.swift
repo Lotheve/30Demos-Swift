@@ -59,10 +59,6 @@ class PersonalViewController: BaseViewController, UINavigationControllerDelegate
         tableMain.contentInset = UIEdgeInsetsMake(TOP_VIEW_HEIGHT, 0, 0, 0)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
     @objc func actionPush() {
         let listVC = ListViewController()
         self.navigationController?.pushViewController(listVC, animated: true)

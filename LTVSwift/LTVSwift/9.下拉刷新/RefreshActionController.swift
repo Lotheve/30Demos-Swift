@@ -41,10 +41,6 @@ class RefreshActionController: BaseViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         self.view.addSubview(tableMain)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     //MARK: - UITableViewDelegate & UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

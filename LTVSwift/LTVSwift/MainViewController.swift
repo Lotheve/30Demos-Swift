@@ -37,10 +37,6 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         self.view.addSubview(tableMain)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
     // MARK: - UITableViewDelegate & UITableViewDataSource
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50

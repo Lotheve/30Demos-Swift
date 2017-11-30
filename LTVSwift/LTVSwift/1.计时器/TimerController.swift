@@ -169,9 +169,4 @@ class TimerController: BaseViewController,UITableViewDataSource,UITableViewDeleg
         }
         return UITableViewCell()
     }
-    
-    //MARK: - Other
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 }

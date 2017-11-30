@@ -25,10 +25,6 @@ class CameraController: BaseViewController, UIActionSheetDelegate, UIImagePicker
         self.view.addSubview(label)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
     @objc func actionRecord() {
         let actionSheet = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: "取消", destructiveButtonTitle: nil, otherButtonTitles: "照片", "视频")
         actionSheet.show(in: self.view)

@@ -44,8 +44,4 @@ class DataPickerController: BaseViewController {
         }
         areaPickerTF?.inputView = areaPicker!
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 }

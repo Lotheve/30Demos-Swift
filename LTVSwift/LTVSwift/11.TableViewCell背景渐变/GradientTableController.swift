@@ -28,11 +28,6 @@ class GradientTableController: BaseViewController, UITableViewDelegate, UITableV
         self.view.addSubview(tableMain)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-
     // MARK: - UITableViewDelegate & UITableViewDataSource
     func numberOfSections(in tableView: UITableView) -> Int {
         return 10

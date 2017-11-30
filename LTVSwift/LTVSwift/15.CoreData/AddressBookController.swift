@@ -57,10 +57,6 @@ class AddressBookController: BaseViewController {
             remindLabel.center = view.center
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     func loadData(){
         let apple = ContactModel(avatar: UIImagePNGRepresentation(UIImage(named: "apple.png")!), name: "Apple(Chinese)", phone: "400-627-2273")

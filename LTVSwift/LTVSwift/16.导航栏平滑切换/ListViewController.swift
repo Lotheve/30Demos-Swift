@@ -34,10 +34,6 @@ class ListViewController: BaseViewController {
         
         self.view.addSubview(tableMain)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 }
 
 extension ListViewController: UITableViewDelegate, UITableViewDataSource {
@@ -60,7 +56,6 @@ extension ListViewController: UIScrollViewDelegate {
         let contentOffset = scrollView.contentOffset
         if contentOffset.y >= NAV_SHOW_Y - NAVI_BAR_HEIGHT && contentOffset.y <= NAV_SHOW_Y - NAVI_BAR_HEIGHT + NAV_TRANSFORM_HEIGHT {
             let scale = 1 - (contentOffset.y - (NAV_SHOW_Y - NAVI_BAR_HEIGHT)) / NAV_TRANSFORM_HEIGHT
-            print(scale)
             self.navBarBgAlpha = scale
         } else if contentOffset.y > NAV_SHOW_Y - NAVI_BAR_HEIGHT + NAV_TRANSFORM_HEIGHT {
             self.navBarBgAlpha = 0

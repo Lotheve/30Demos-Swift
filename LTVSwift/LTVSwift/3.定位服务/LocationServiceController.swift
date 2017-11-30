@@ -116,9 +116,4 @@ class LocationServiceController: BaseViewController {
             }
         }
     }
-    
-    //MARK: - Other
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 }

@@ -69,10 +69,6 @@ class ContactAddController: BaseViewController {
             self.telTF.text = contact.phone
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     @IBAction func actionSelectAvator(_ sender: UITapGestureRecognizer) {
         let imagePicker = UIImagePickerController()

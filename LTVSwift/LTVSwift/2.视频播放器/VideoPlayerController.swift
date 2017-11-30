@@ -43,8 +43,4 @@ class VideoPlayerController: BaseViewController {
             }
         }
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 }

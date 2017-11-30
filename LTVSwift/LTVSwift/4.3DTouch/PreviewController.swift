@@ -48,8 +48,4 @@ class PreviewController: BaseViewController {
         super.viewWillLayoutSubviews()
         label?.center = self.view.center
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 }

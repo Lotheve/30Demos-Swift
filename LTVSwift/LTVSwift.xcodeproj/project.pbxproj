@@ -70,6 +70,24 @@
 		6E6E66331FAAC70000067A14 /* LTVLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6E66321FAAC70000067A14 /* LTVLocationManager.swift */; };
 		6E71B0D61FAAB2C900710A45 /* VideoPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E71B0D41FAAB2C900710A45 /* VideoPlayerController.swift */; };
 		6E8560571FAE01E600A31BBF /* GraduateColorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8560561FAE01E600A31BBF /* GraduateColorController.swift */; };
+		6E874FFE1FCE57B8009447C5 /* BookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E874FFD1FCE57B8009447C5 /* BookListViewController.swift */; };
+		6E8750011FCE57EF009447C5 /* books.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E8750001FCE57EF009447C5 /* books.plist */; };
+		6E87500D1FCE5DB6009447C5 /* React Native入门与实战.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E8750021FCE5DB4009447C5 /* React Native入门与实战.jpg */; };
+		6E87500E1FCE5DB6009447C5 /* 高性能JavaScript.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E8750031FCE5DB4009447C5 /* 高性能JavaScript.jpg */; };
+		6E87500F1FCE5DB6009447C5 /* JavaScript高级程序设计.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E8750041FCE5DB5009447C5 /* JavaScript高级程序设计.jpg */; };
+		6E8750101FCE5DB6009447C5 /* Swift编程权威指南.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E8750051FCE5DB5009447C5 /* Swift编程权威指南.jpg */; };
+		6E8750111FCE5DB6009447C5 /* Objective-C程序设计（第6版）.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E8750061FCE5DB5009447C5 /* Objective-C程序设计（第6版）.jpg */; };
+		6E8750121FCE5DB6009447C5 /* Swift学习手册.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E8750071FCE5DB5009447C5 /* Swift学习手册.jpg */; };
+		6E8750131FCE5DB6009447C5 /* Nginx高性能Web服务器详解.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E8750081FCE5DB5009447C5 /* Nginx高性能Web服务器详解.jpg */; };
+		6E8750141FCE5DB6009447C5 /* Head First Android开发.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E8750091FCE5DB5009447C5 /* Head First Android开发.jpg */; };
+		6E8750151FCE5DB6009447C5 /* PHP学习手册.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E87500A1FCE5DB6009447C5 /* PHP学习手册.jpg */; };
+		6E8750161FCE5DB6009447C5 /* Objective-C编程之道.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E87500B1FCE5DB6009447C5 /* Objective-C编程之道.jpg */; };
+		6E8750171FCE5DB6009447C5 /* 精通Swift设计模式.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E87500C1FCE5DB6009447C5 /* 精通Swift设计模式.jpg */; };
+		6E8750541FCE9301009447C5 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8750521FCE9301009447C5 /* BookCell.swift */; };
+		6E8750551FCE9301009447C5 /* BookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E8750531FCE9301009447C5 /* BookCell.xib */; };
+		6E8750571FCE941E009447C5 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8750561FCE941E009447C5 /* Book.swift */; };
+		6E87505A1FCE986B009447C5 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8750581FCE986B009447C5 /* BookDetailViewController.swift */; };
+		6E87505B1FCE986B009447C5 /* BookDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E8750591FCE986B009447C5 /* BookDetailViewController.xib */; };
 		6E9A96201FB1865A00405E1B /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9A961E1FB1865A00405E1B /* CarouselCell.swift */; };
 		6E9A96211FB1865A00405E1B /* CarouselCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E9A961F1FB1865A00405E1B /* CarouselCell.xib */; };
 		6E9A96331FB18A4000405E1B /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E9A96291FB18A3F00405E1B /* 0.jpg */; };
@@ -186,6 +204,24 @@
 		6E6E66321FAAC70000067A14 /* LTVLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTVLocationManager.swift; sourceTree = "<group>"; };
 		6E71B0D41FAAB2C900710A45 /* VideoPlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerController.swift; sourceTree = "<group>"; };
 		6E8560561FAE01E600A31BBF /* GraduateColorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraduateColorController.swift; sourceTree = "<group>"; };
+		6E874FFD1FCE57B8009447C5 /* BookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewController.swift; sourceTree = "<group>"; };
+		6E8750001FCE57EF009447C5 /* books.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = books.plist; sourceTree = "<group>"; };
+		6E8750021FCE5DB4009447C5 /* React Native入门与实战.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "React Native入门与实战.jpg"; sourceTree = "<group>"; };
+		6E8750031FCE5DB4009447C5 /* 高性能JavaScript.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "高性能JavaScript.jpg"; sourceTree = "<group>"; };
+		6E8750041FCE5DB5009447C5 /* JavaScript高级程序设计.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "JavaScript高级程序设计.jpg"; sourceTree = "<group>"; };
+		6E8750051FCE5DB5009447C5 /* Swift编程权威指南.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Swift编程权威指南.jpg"; sourceTree = "<group>"; };
+		6E8750061FCE5DB5009447C5 /* Objective-C程序设计（第6版）.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Objective-C程序设计（第6版）.jpg"; sourceTree = "<group>"; };
+		6E8750071FCE5DB5009447C5 /* Swift学习手册.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Swift学习手册.jpg"; sourceTree = "<group>"; };
+		6E8750081FCE5DB5009447C5 /* Nginx高性能Web服务器详解.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Nginx高性能Web服务器详解.jpg"; sourceTree = "<group>"; };
+		6E8750091FCE5DB5009447C5 /* Head First Android开发.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Head First Android开发.jpg"; sourceTree = "<group>"; };
+		6E87500A1FCE5DB6009447C5 /* PHP学习手册.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "PHP学习手册.jpg"; sourceTree = "<group>"; };
+		6E87500B1FCE5DB6009447C5 /* Objective-C编程之道.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Objective-C编程之道.jpg"; sourceTree = "<group>"; };
+		6E87500C1FCE5DB6009447C5 /* 精通Swift设计模式.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "精通Swift设计模式.jpg"; sourceTree = "<group>"; };
+		6E8750521FCE9301009447C5 /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
+		6E8750531FCE9301009447C5 /* BookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCell.xib; sourceTree = "<group>"; };
+		6E8750561FCE941E009447C5 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		6E8750581FCE986B009447C5 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
+		6E8750591FCE986B009447C5 /* BookDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookDetailViewController.xib; sourceTree = "<group>"; };
 		6E9A961E1FB1865A00405E1B /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
 		6E9A961F1FB1865A00405E1B /* CarouselCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselCell.xib; sourceTree = "<group>"; };
 		6E9A96291FB18A3F00405E1B /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
@@ -305,6 +341,7 @@
 				6E6227A41FB948E90087AC1D /* 14.粒子动画 */,
 				6E6325551FBA96630046171F /* 15.CoreData */,
 				6EB400321FC267A200172174 /* 16.导航栏平滑切换 */,
+				6E874FFC1FCE574B009447C5 /* 17.搜索（内部+外部） */,
 				6E207D691FA71CE600E323EA /* Assets.xcassets */,
 				6E207D6B1FA71CE600E323EA /* LaunchScreen.storyboard */,
 				6E207D6E1FA71CE600E323EA /* Info.plist */,
@@ -477,6 +514,39 @@
 			path = "5.渐变色";
 			sourceTree = "<group>";
 		};
+		6E874FFC1FCE574B009447C5 /* 17.搜索（内部+外部） */ = {
+			isa = PBXGroup;
+			children = (
+				6E874FFF1FCE57D1009447C5 /* Resources */,
+				6E874FFD1FCE57B8009447C5 /* BookListViewController.swift */,
+				6E8750581FCE986B009447C5 /* BookDetailViewController.swift */,
+				6E8750591FCE986B009447C5 /* BookDetailViewController.xib */,
+				6E8750561FCE941E009447C5 /* Book.swift */,
+				6E8750521FCE9301009447C5 /* BookCell.swift */,
+				6E8750531FCE9301009447C5 /* BookCell.xib */,
+			);
+			path = "17.搜索（内部+外部）";
+			sourceTree = "<group>";
+		};
+		6E874FFF1FCE57D1009447C5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6E8750031FCE5DB4009447C5 /* 高性能JavaScript.jpg */,
+				6E87500C1FCE5DB6009447C5 /* 精通Swift设计模式.jpg */,
+				6E8750091FCE5DB5009447C5 /* Head First Android开发.jpg */,
+				6E8750041FCE5DB5009447C5 /* JavaScript高级程序设计.jpg */,
+				6E8750081FCE5DB5009447C5 /* Nginx高性能Web服务器详解.jpg */,
+				6E87500B1FCE5DB6009447C5 /* Objective-C编程之道.jpg */,
+				6E8750061FCE5DB5009447C5 /* Objective-C程序设计（第6版）.jpg */,
+				6E87500A1FCE5DB6009447C5 /* PHP学习手册.jpg */,
+				6E8750021FCE5DB4009447C5 /* React Native入门与实战.jpg */,
+				6E8750051FCE5DB5009447C5 /* Swift编程权威指南.jpg */,
+				6E8750071FCE5DB5009447C5 /* Swift学习手册.jpg */,
+				6E8750001FCE57EF009447C5 /* books.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		6E9A96281FB18A3F00405E1B /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -644,6 +714,7 @@
 				6E9A963B1FB18A4000405E1B /* 8.jpg in Resources */,
 				6E6325531FBA84CC0046171F /* spark.png in Resources */,
 				6E4E3CFE1FBD67220091FA91 /* Alexandre Smith.png in Resources */,
+				6E8750121FCE5DB6009447C5 /* Swift学习手册.jpg in Resources */,
 				6E9A963C1FB18A4000405E1B /* 9.jpg in Resources */,
 				6E6E662C1FAABBDB00067A14 /* video.mov in Resources */,
 				6E207D6D1FA71CE600E323EA /* LaunchScreen.storyboard in Resources */,
@@ -653,30 +724,41 @@
 				6E3FBAB11FAC42CE00157CFE /* ThreeDTouchController.xib in Resources */,
 				6E12130A1FA9F9E9007207D1 /* TimerCell.xib in Resources */,
 				6E2996071FB5509E009EF254 /* iconfont-password.png in Resources */,
+				6E8750151FCE5DB6009447C5 /* PHP学习手册.jpg in Resources */,
 				6E9A96371FB18A4000405E1B /* 4.jpg in Resources */,
 				6E4E3CFF1FBD67220091FA91 /* Batman (Best Friend).png in Resources */,
 				6E9A96361FB18A4000405E1B /* 3.jpg in Resources */,
 				6E4E3D011FBD67220091FA91 /* Justin Timberlake.png in Resources */,
 				6E57DA0A1FB2F7D80064552F /* RefreshContentView.xib in Resources */,
+				6E87500D1FCE5DB6009447C5 /* React Native入门与实战.jpg in Resources */,
 				6E9A96351FB18A4000405E1B /* 2.jpg in Resources */,
 				6E52B9DB1FB034D8007FBCB3 /* area.plist in Resources */,
+				6E8750101FCE5DB6009447C5 /* Swift编程权威指南.jpg in Resources */,
 				6E2996081FB5509E009EF254 /* iconfont-user.png in Resources */,
 				6EB4003A1FC2C91100172174 /* PersonalViewController.xib in Resources */,
+				6E8750131FCE5DB6009447C5 /* Nginx高性能Web服务器详解.jpg in Resources */,
 				6E2996051FB5509E009EF254 /* arm-up-right@2x.png in Resources */,
+				6E8750011FCE57EF009447C5 /* books.plist in Resources */,
 				6E6E66311FAAC18D00067A14 /* LocationServiceController.xib in Resources */,
+				6E8750111FCE5DB6009447C5 /* Objective-C程序设计（第6版）.jpg in Resources */,
 				6EE1EF601FAFEFD000FB55CD /* GraduateColorController.xib in Resources */,
 				6E2996021FB5509E009EF254 /* arm-down-left@2x.png in Resources */,
 				6E9A96341FB18A4000405E1B /* 1.jpg in Resources */,
+				6E8750161FCE5DB6009447C5 /* Objective-C编程之道.jpg in Resources */,
 				6E4E3CF61FBD639E0091FA91 /* ContactCell.xib in Resources */,
 				6ECA01641FB3D4E100D5F3A2 /* cat.jpg in Resources */,
 				6E6325521FBA84CC0046171F /* rocket.png in Resources */,
 				6ECA01661FB425B400D5F3A2 /* ImageTransformController.xib in Resources */,
+				6E8750171FCE5DB6009447C5 /* 精通Swift设计模式.jpg in Resources */,
 				6E2996041FB5509E009EF254 /* arm-up-left@2x.png in Resources */,
 				6E1213061FA9A9D4007207D1 /* TimerController.xib in Resources */,
+				6E87500F1FCE5DB6009447C5 /* JavaScript高级程序设计.jpg in Resources */,
 				6E4E3D001FBD67220091FA91 /* Emma Watson.png in Resources */,
 				6E2996061FB5509E009EF254 /* face@2x.png in Resources */,
 				6E9A96391FB18A4000405E1B /* 6.jpg in Resources */,
+				6E8750141FCE5DB6009447C5 /* Head First Android开发.jpg in Resources */,
 				6E9A96381FB18A4000405E1B /* 5.jpg in Resources */,
+				6E8750551FCE9301009447C5 /* BookCell.xib in Resources */,
 				6E2996031FB5509E009EF254 /* arm-down-right@2x.png in Resources */,
 				6E4E3D071FBD6D2C0091FA91 /* avatar.png in Resources */,
 				6E3ACC3D1FBD7F140029BDFD /* gentleman.png in Resources */,
@@ -685,6 +767,8 @@
 				6E6325511FBA84CC0046171F /* bund.png in Resources */,
 				6E3ACC3C1FBD7F140029BDFD /* apple.png in Resources */,
 				6E4E3D031FBD67220091FA91 /* Taylor Swift.png in Resources */,
+				6E87505B1FCE986B009447C5 /* BookDetailViewController.xib in Resources */,
+				6E87500E1FCE5DB6009447C5 /* 高性能JavaScript.jpg in Resources */,
 				6E207D6A1FA71CE600E323EA /* Assets.xcassets in Resources */,
 				6E207DB21FA73C9E00E323EA /* demoList.plist in Resources */,
 				6E114FF61FB00114009AD905 /* DataPickerController.xib in Resources */,
@@ -737,14 +821,18 @@
 				6E3FBAB31FAC557400157CFE /* PreviewController.swift in Sources */,
 				6E207D631FA71CE600E323EA /* AppDelegate.swift in Sources */,
 				6EB400361FC2698B00172174 /* PersonalViewController.swift in Sources */,
+				6E8750541FCE9301009447C5 /* BookCell.swift in Sources */,
 				6ECA016B1FB43EE400D5F3A2 /* GradientCell.swift in Sources */,
+				6E87505A1FCE986B009447C5 /* BookDetailViewController.swift in Sources */,
 				6E29960A1FB59023009EF254 /* LoginSuccessController.swift in Sources */,
 				6EB400381FC2772B00172174 /* ListViewController.swift in Sources */,
 				6E1213051FA9A9D4007207D1 /* TimerController.swift in Sources */,
 				6E3ACC391FBD7B8D0029BDFD /* AddressBook.xcdatamodeld in Sources */,
+				6E874FFE1FCE57B8009447C5 /* BookListViewController.swift in Sources */,
 				6E4A67C71FB2EBD000A30647 /* LTVRefreshControl.swift in Sources */,
 				6E3FBAB01FAC42CE00157CFE /* ThreeDTouchController.swift in Sources */,
 				6E9A967B1FB28A0500405E1B /* CameraController.swift in Sources */,
+				6E8750571FCE941E009447C5 /* Book.swift in Sources */,
 				6E57DA061FB2F7B70064552F /* RefreshContentView.swift in Sources */,
 				6E4E3CEE1FBD62100091FA91 /* AddressBookController.swift in Sources */,
 				6E207D911FA71E2300E323EA /* MainViewController.swift in Sources */,

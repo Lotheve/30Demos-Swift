@@ -101,11 +101,7 @@ class AnimLoginViewController: BaseViewController {
         self.accountTextfield.text = ""
         self.passwordTextfield.text = ""
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
+
     func entranceAnimate() {
         
         let translationX = self.accountView.frame.minX + self.accountView.frame.width

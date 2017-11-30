@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>高性能JavaScript</string>
+		<key>author</key>
+		<string>Nicholas C. Zakas（尼古拉斯·泽卡斯）</string>
+		<key>image</key>
+		<string>高性能JavaScript</string>
+		<key>description</key>
+		<string>值得所有前端人员细细品读的经典，来自一线实践经验总结，提升JavaScript性能立竿见影</string>
+		<key>price</key>
+		<string>51.40</string>
+		<key>press</key>
+		<string>电子工业出版社</string>
+		<key>intro</key>
+		<string>如果你使用 JavaScript 构建交互丰富的 Web 应用，那么 JavaScript 代码可能是造成你的Web应用速度变慢的主要原因。本书揭示的技术和策略能帮助你在开发过程中消除性能瓶颈。你将会了解如何提升各方面的性能，包括代码的加载、运行、DOM 交互、页面生存周期等。雅虎的前端工程师 Nicholas C. Zakas 和其他五位 JavaScript 专家介绍了页面代码加载的优佳方法和编程技巧，来帮助你编写更为高效和快速的代码。你还会了解到构建和部署文件到生产环境的优佳实践，以及有助于定位线上问题的工具。</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Nginx高性能Web服务器详解</string>
+		<key>author</key>
+		<string>苗泽</string>
+		<key>image</key>
+		<string>Nginx高性能Web服务器详解</string>
+		<key>description</key>
+		<string>深入Nginx源码内部，从底层搞定服务器配置</string>
+		<key>price</key>
+		<string>46.60</string>
+		<key>press</key>
+		<string>电子工业出版社</string>
+		<key>intro</key>
+		<string>《Nginx高性能Web服务器详解》全面介绍了当前Internet上流行的一款开放源代码的Web服务器——Nginx。全书一共分为四大部分，分别从入门、功能、实现和应用等四个方面对Nginx服务器的知识进行完整阐述，从而满足广大读者在应用Nginx服务器时的普遍性需求。同时也深入剖析了Nginx服务器的工作原理和实现技术，对其中使用到的数据结构和方法进行了详细阐述，并且结合实际的应用情况给出了多个基于Nginx服务器，同时还部署有其他典型服务器的分布式网站架构部署配置。
+　　《Nginx高性能Web服务器详解》特别适合于希望了解和掌握Nginx服务器应用技术和实现技术的广大教师、学生和电脑爱好者阅读，对使用Nginx服务器搭建Web服务器架构或进行网络服务器应用开发的技术人员尤其具有重要的阅读和参考价值。</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Swift学习手册</string>
+		<key>author</key>
+		<string>Jonathon Manning(乔纳森，曼宁) </string>
+		<key>image</key>
+		<string>Swift学习手册</string>
+		<key>description</key>
+		<string>本书讲解常用的Swift设计模式、Apple平台中应用的结构，还会说明如何把应用提交到App Store。构建真实可用的OS X和iOS应用，动手实践Swift编程语言。</string>
+		<key>price</key>
+		<string>66.00</string>
+		<key>press</key>
+		<string>中国电力出版社</string>
+		<key>intro</key>
+		<string>《Swift学习手册》分为四部分，涵盖以下内容：Swift基础知识：学习Swift的面向对象特性，以及各种开发工具。OS X应用开发：规划应用，处理文档，然后构建各项功能。iOS应用开发：使用多媒体、联系人、位置、通知和iCloud 构建一个功能完善的iOS记事本应用。高级应用扩展：支持Apple Watch，学习如何调试、监控和测试全部三个Swift应用。</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>精通Swift设计模式</string>
+		<key>author</key>
+		<string>亚当·弗里曼（Adam Freeman）</string>
+		<key>image</key>
+		<string>精通Swift设计模式</string>
+		<key>description</key>
+		<string>灵活掌握Swift语言 深度解析多种设计模式 全面提升iOS开发水准</string>
+		<key>price</key>
+		<string>70.30</string>
+		<key>press</key>
+		<string>人民邮电出版社</string>
+		<key>intro</key>
+		<string>本书是系统学习Swift 设计模式和Cocoa 框架知识的**参考图书。书中内容分为五部分：首部分介绍学习本书的预备知识，包括使用Xcode 创建的Playgroud 文件和名为SportsStore 的iOS 应用；第二部分讲解创建型模式，并辅以大量代码示例和图示；第三部分阐述结构型模式，并重点区分了容易混淆的模式；第四部分介绍行为型模式，总结了一些知名度较小的模式；第五部分讨论MVC 模式，剖析了MVC 模式的重要性。</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Swift编程权威指南</string>
+		<key>author</key>
+		<string>马修·马赛厄斯（Matthew Mathias）</string>
+		<key>image</key>
+		<string>Swift编程权威指南</string>
+		<key>description</key>
+		<string>适读人群 ：本书读者对象为iOS和macOS平台移动开发人员。</string>
+		<key>price</key>
+		<string>70.30</string>
+		<key>press</key>
+		<string>人民邮电出版社</string>
+		<key>intro</key>
+		<string>Big Nerd Ranch是美国一家专业的移动开发技术培训机构，本书是其培训教材。书中系统讲解了在iOS和macOS平台上，使用苹果的Swift语言开发iPhone、iPad和Mac应用的基本概念和编程技巧。主要围绕使用Swift语言进行iOS和macOS开发，结合大量代码示例，教会读者利用高级iOS和macOS特性开发真实的应用。</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Objective-C程序设计（第6版）</string>
+		<key>author</key>
+		<string>Stephen G. Kochan</string>
+		<key>image</key>
+		<string>Objective-C程序设计（第6版）</string>
+		<key>description</key>
+		<string>iOS、Xcode、OS X Mavericks新版，全球畅销苹果开发入门重大升级</string>
+		<key>price</key>
+		<string>70.30</string>
+		<key>press</key>
+		<string>电子工业出版社</string>
+		<key>intro</key>
+		<string>《Objective-C程序设计（第6版）》是为在苹果iOS和OS X平台上，使用Objective-C语言和面向对象程序设计模式进行专业开发而编写的简洁、细致的入门读物。本书假设读者无面向对象程序语言或C语言编程经验，以保障初学者与有经验的程序员一样，可用本书迅速和有效地学习Objective-C。本书提供的学习方法独特，结合众多程序示例及章末练习，使得《Objective-C程序设计（第6版）》同时适合自学和课堂教学。第6版已全面更新，充分纳入Objective-C的新功能与技术，同时覆盖对新版Xcode、iOS和Mac OS X Mavericks的介绍。</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Objective-C编程之道：iOS设计模式解析</string>
+		<key>author</key>
+		<string>Carlo Chung</string>
+		<key>image</key>
+		<string>Objective-C编程之道</string>
+		<key>description</key>
+		<string>解析iOS设计模式的开山之作</string>
+		<key>price</key>
+		<string>46.60</string>
+		<key>press</key>
+		<string>人民邮电出版社</string>
+		<key>intro</key>
+		<string>　　《Objective-C编程之道：iOS设计模式解析》是基于iOS的软件开发指南。书中应用GoF的经典设计模式，介绍了如何在代码中应用创建型模式、结构型模式和行为模式，如何设计模式以巩固应用程序，并通过设计模式实例介绍MVC在CocoaTouch框架中的工作方式。
+　　《Objective-C编程之道：iOS设计模式解析》适用于那些已经具备Objective-C基础、想利用设计模式来提高软件开发效率的中高级iOS开发人员。</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>PHP学习手册</string>
+		<key>author</key>
+		<string>David，Sklar（大卫·斯克拉）</string>
+		<key>image</key>
+		<string>PHP学习手册</string>
+		<key>description</key>
+		<string>如果想学习 PHP，看这本书就对了！</string>
+		<key>price</key>
+		<string>51.00</string>
+		<key>press</key>
+		<string>中国电力出版社</string>
+		<key>intro</key>
+		<string>不管你是构建动态网站的爱好者，想提升服务器端编程技术的前端开发者，还是想快速入门PHP的其他语言程序员，都可以阅读本书。这本书还涵盖现代的PHP技术，例如国际化、在命令行中使用PHP和包管理。</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Head First Android开发</string>
+		<key>author</key>
+		<string>Dawn Griffiths（道恩·格里菲斯）</string>
+		<key>image</key>
+		<string>Head First Android开发</string>
+		<key>description</key>
+		<string>本书用一种友好、准确并且有趣的方式带你在Android开发之路上快步前行。</string>
+		<key>price</key>
+		<string>101.10</string>
+		<key>press</key>
+		<string>中国电力出版社</string>
+		<key>intro</key>
+		<string>《Head First Android开发》如果你有一个很好的想法，要开发一流的Android应用，这本书会帮你用zui快的速度构建你的第yi个实际应用。你会学到一些实践技巧，掌握如何建立应用的结构，如何设计界面，如何创建数据库，如何让你的应用同时适用手机和平板电脑，以及很多其他方面。这就像是有一位富有经验的Android开发人员坐在你旁边！你只需要对Java有一些了解就能轻松地学习这本书。</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>React Native入门与实战.jpg</string>
+		<key>author</key>
+		<string>王利华，魏晓军，冯诚祺</string>
+		<key>image</key>
+		<string>React Native入门与实战.jpg</string>
+		<key>description</key>
+		<string>国内第1本React Native原创图书 携程框架团队倾力打造 Web前端开发 JavaScript网页开发必读 Ios开发 Android开发原生应用从入门到精通</string>
+		<key>price</key>
+		<string>62.40</string>
+		<key>press</key>
+		<string>人民邮电出版社</string>
+		<key>intro</key>
+		<string>本书共4部分，首先简要介绍了React Native的开发基础知识，然后介绍了React Native的API、组件以及Native扩展和组件的封装，接着介绍了App的动态更新和上架过程，最后通过3个案例介绍了如何使用React Native开发原生App。</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>JavaScript高级程序设计</string>
+		<key>author</key>
+		<string>Nicholas C.Zakas</string>
+		<key>image</key>
+		<string>JavaScript高级程序设计</string>
+		<key>description</key>
+		<string>前端开发经典图书 JavaScript技术名著 web前端开发国内js一书 掌握JavaScript编程艺术</string>
+		<key>price</key>
+		<string>78.20</string>
+		<key>press</key>
+		<string>人民邮电出版社</string>
+		<key>intro</key>
+		<string>　　作为JavaScript技术经典名著，《JavaScript高级程序设计（第3版）》承继了之前版本全面深入、贴近实战的特点，在详细讲解了JavaScript语言的核心之后，条分缕析地为读者展示了现有规范及实现为开发Web应用提供的各种支持和特性。
+　　《JavaScript高级程序设计（第3版）》主要内容包括：
+　　对JavaScript实现各个组成部分的详尽解读；
+　　对JavaScript面向对象编程的全方位阐述；
+　　对DOM、BOM及浏览器事件模型的透彻剖析；
+　　Web应用基本数据格式JSON、XML及其存取；
+　　Ajax、Comet服务器端通信和基于File API的拖放式文件上传；
+　　ECMAScript 5定义的新核心语言特性；
+　　HTML5涵盖的表单、媒体、Canvas（包括WebGL）；
+　　Selectors、Web? Workers、地理定位及跨文档传递消息等新API；
+　　离线应用及客户端存储（包括IndexedDB）；
+　　维护、性能、部署相关的开发实践；
+　　新兴API及ECMAScript Harmony展望。
+　　《JavaScript高级程序设计（第3版）》适合有一定编程经验的Web应用开发人员阅读，也可作为高校及社会实用技术培训相关专业课程的教材。</string>
+	</dict>
+</array>
+</plist>

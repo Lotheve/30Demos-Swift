@@ -93,10 +93,6 @@ class ParticleAnimationController: BaseViewController {
         burst.emitterCells = [spark]
         self.view.layer.addSublayer(fireworkEmitter)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 }
 
 
