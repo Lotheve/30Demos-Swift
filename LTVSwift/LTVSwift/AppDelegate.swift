@@ -12,6 +12,7 @@ import CoreSpotlight
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var spolightBooks:[Book]?
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -79,27 +80,34 @@ extension AppDelegate {
         guard let path = Bundle.main.path(forResource: "books", ofType: "plist") else {
             return
         }
+        
         var books:[Book] = []
         if let originData = NSArray(contentsOfFile: path) as? Array<[String:String]> {
             for data in originData {
                 books.append(Book(dictionary: data))
             }
         }
+        spolightBooks = books
         
         var items:[CSSearchableItem] = []
-        for book in books {
+        for book in spolightBooks! {
             
-            let attributeSet = CSSearchableItemAttributeSet(itemContentType: "book")
-            attributeSet.title = book.title
-            attributeSet.contentDescription = book.description
-            attributeSet.thumbnailData = (book.cover != nil) ? UIImageJPEGRepresentation(UIImage(named: "\(book.cover!).jpg")!, 1.0) : nil
-            attributeSet.keywords = book.spolightKeys
-    
-            print(book.spolightKeys)
-            
-            let item = CSSearchableItem(uniqueIdentifier: "book", domainIdentifier: "book_domain", attributeSet: attributeSet)
-    
-            items.append(item)
+            if let id = book.spolightid {
+                let attributeSet = CSSearchableItemAttributeSet(itemContentType: "book")
+                attributeSet.title = book.title
+                attributeSet.contentDescription = book.des
+                attributeSet.thumbnailData = (book.cover != nil) ? UIImageJPEGRepresentation(UIImage(named: "\(book.cover!).jpg")!, 1.0) : nil
+                
+                if let spolightKey = book.spolightKey {
+                    let keys = spolightKey.components(separatedBy: "|")
+                    attributeSet.keywords = keys
+                    print(keys)
+                }
+                
+                let item = CSSearchableItem(uniqueIdentifier: id, domainIdentifier: "book_domain", attributeSet: attributeSet)
+                
+                items.append(item)
+            }
         }
 
         CSSearchableIndex.default().indexSearchableItems(items) {
@@ -170,9 +178,33 @@ extension AppDelegate {
     
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
         
-        let identifier = userActivity.userInfo
-        print(identifier)
-        
+        if userActivity.userInfo != nil, let identifier = userActivity.userInfo!["kCSSearchableItemActivityIdentifier"] as? String  {
+            if spolightBooks == nil {
+                guard let path = Bundle.main.path(forResource: "books", ofType: "plist") else {
+                    return true
+                }
+                var books:[Book] = []
+                if let originData = NSArray(contentsOfFile: path) as? Array<[String:String]> {
+                    for data in originData {
+                        books.append(Book(dictionary: data))
+                    }
+                }
+                spolightBooks = books
+            }
+            
+            for book in spolightBooks! {
+                if let spolightid = book.spolightid, spolightid == identifier {
+                    let bookDetailVC = BookDetailViewController(bookInfo: book)
+                    
+                    let navc = self.window?.rootViewController as! UINavigationController
+                    if navc.topViewController != navc.viewControllers.first {
+                        navc.popToRootViewController(animated: true)
+                    }
+                    navc.pushViewController(bookDetailVC, animated: true)
+                    break
+                }
+            }
+        }
         return true
     }
 }

@@ -3,11 +3,10 @@
 <plist version="1.0">
 <array>
 	<dict>
-		<key>spolightKeys</key>
-		<array>
-			<string>JavaScript</string>
-			<string>高性能JavaScript</string>
-		</array>
+		<key>spolightid</key>
+		<string>spolightid1</string>
+		<key>spolightKey</key>
+		<string>JavaScript|高性能JavaScript</string>
 		<key>title</key>
 		<string>高性能JavaScript</string>
 		<key>author</key>
@@ -24,10 +23,10 @@
 		<string>如果你使用 JavaScript 构建交互丰富的 Web 应用，那么 JavaScript 代码可能是造成你的Web应用速度变慢的主要原因。本书揭示的技术和策略能帮助你在开发过程中消除性能瓶颈。你将会了解如何提升各方面的性能，包括代码的加载、运行、DOM 交互、页面生存周期等。雅虎的前端工程师 Nicholas C. Zakas 和其他五位 JavaScript 专家介绍了页面代码加载的优佳方法和编程技巧，来帮助你编写更为高效和快速的代码。你还会了解到构建和部署文件到生产环境的优佳实践，以及有助于定位线上问题的工具。</string>
 	</dict>
 	<dict>
-		<key>spolightKeys</key>
-		<array>
-			<string>Nginx</string>
-		</array>
+		<key>spolightid</key>
+		<string>spolightid2</string>
+		<key>spolightKey</key>
+		<string>Nginx|Nginx高性能Web服务器详解</string>
 		<key>title</key>
 		<string>Nginx高性能Web服务器详解</string>
 		<key>author</key>
@@ -45,11 +44,10 @@
 　　《Nginx高性能Web服务器详解》特别适合于希望了解和掌握Nginx服务器应用技术和实现技术的广大教师、学生和电脑爱好者阅读，对使用Nginx服务器搭建Web服务器架构或进行网络服务器应用开发的技术人员尤其具有重要的阅读和参考价值。</string>
 	</dict>
 	<dict>
-		<key>spolightKeys</key>
-		<array>
-			<string>Swift学习手册</string>
-			<string>Swift</string>
-		</array>
+		<key>spolightid</key>
+		<string>spolightid3</string>
+		<key>spolightKey</key>
+		<string>Swift学习手册|Swift</string>
 		<key>title</key>
 		<string>Swift学习手册</string>
 		<key>author</key>
@@ -66,11 +64,10 @@
 		<string>《Swift学习手册》分为四部分，涵盖以下内容：Swift基础知识：学习Swift的面向对象特性，以及各种开发工具。OS X应用开发：规划应用，处理文档，然后构建各项功能。iOS应用开发：使用多媒体、联系人、位置、通知和iCloud 构建一个功能完善的iOS记事本应用。高级应用扩展：支持Apple Watch，学习如何调试、监控和测试全部三个Swift应用。</string>
 	</dict>
 	<dict>
-		<key>spolightKeys</key>
-		<array>
-			<string>精通Swift设计模式</string>
-			<string>Swift</string>
-		</array>
+		<key>spolightid</key>
+		<string>spolightid4</string>
+		<key>spolightKey</key>
+		<string>精通Swift设计模式|Swift</string>
 		<key>title</key>
 		<string>精通Swift设计模式</string>
 		<key>author</key>
@@ -87,11 +84,10 @@
 		<string>本书是系统学习Swift 设计模式和Cocoa 框架知识的**参考图书。书中内容分为五部分：首部分介绍学习本书的预备知识，包括使用Xcode 创建的Playgroud 文件和名为SportsStore 的iOS 应用；第二部分讲解创建型模式，并辅以大量代码示例和图示；第三部分阐述结构型模式，并重点区分了容易混淆的模式；第四部分介绍行为型模式，总结了一些知名度较小的模式；第五部分讨论MVC 模式，剖析了MVC 模式的重要性。</string>
 	</dict>
 	<dict>
-		<key>spolightKeys</key>
-		<array>
-			<string>Swift编程权威指南</string>
-			<string>Swift</string>
-		</array>
+		<key>spolightid</key>
+		<string>spolightid5</string>
+		<key>spolightKey</key>
+		<string>Swift编程权威指南|Swift</string>
 		<key>title</key>
 		<string>Swift编程权威指南</string>
 		<key>author</key>
@@ -108,11 +104,10 @@
 		<string>Big Nerd Ranch是美国一家专业的移动开发技术培训机构，本书是其培训教材。书中系统讲解了在iOS和macOS平台上，使用苹果的Swift语言开发iPhone、iPad和Mac应用的基本概念和编程技巧。主要围绕使用Swift语言进行iOS和macOS开发，结合大量代码示例，教会读者利用高级iOS和macOS特性开发真实的应用。</string>
 	</dict>
 	<dict>
-		<key>spolightKeys</key>
-		<array>
-			<string>Objective-C程序设计</string>
-			<string>Objective-C</string>
-		</array>
+		<key>spolightid</key>
+		<string>spolightid6</string>
+		<key>spolightKey</key>
+		<string>Objective-C程序设计|Objective-C</string>
 		<key>title</key>
 		<string>Objective-C程序设计（第6版）</string>
 		<key>author</key>
@@ -129,11 +124,10 @@
 		<string>《Objective-C程序设计（第6版）》是为在苹果iOS和OS X平台上，使用Objective-C语言和面向对象程序设计模式进行专业开发而编写的简洁、细致的入门读物。本书假设读者无面向对象程序语言或C语言编程经验，以保障初学者与有经验的程序员一样，可用本书迅速和有效地学习Objective-C。本书提供的学习方法独特，结合众多程序示例及章末练习，使得《Objective-C程序设计（第6版）》同时适合自学和课堂教学。第6版已全面更新，充分纳入Objective-C的新功能与技术，同时覆盖对新版Xcode、iOS和Mac OS X Mavericks的介绍。</string>
 	</dict>
 	<dict>
-		<key>spolightKeys</key>
-		<array>
-			<string>Objective-C编程之道</string>
-			<string>Objective-C</string>
-		</array>
+		<key>spolightid</key>
+		<string>spolightid7</string>
+		<key>spolightKey</key>
+		<string>Objective-C编程之道|Objective-C</string>
 		<key>title</key>
 		<string>Objective-C编程之道：iOS设计模式解析</string>
 		<key>author</key>
@@ -151,11 +145,10 @@
 　　《Objective-C编程之道：iOS设计模式解析》适用于那些已经具备Objective-C基础、想利用设计模式来提高软件开发效率的中高级iOS开发人员。</string>
 	</dict>
 	<dict>
-		<key>spolightKeys</key>
-		<array>
-			<string>PHP学习手册</string>
-			<string>PHP</string>
-		</array>
+		<key>spolightid</key>
+		<string>spolightid8</string>
+		<key>spolightKey</key>
+		<string>PHP学习手册|PHP</string>
 		<key>title</key>
 		<string>PHP学习手册</string>
 		<key>author</key>
@@ -172,11 +165,10 @@
 		<string>不管你是构建动态网站的爱好者，想提升服务器端编程技术的前端开发者，还是想快速入门PHP的其他语言程序员，都可以阅读本书。这本书还涵盖现代的PHP技术，例如国际化、在命令行中使用PHP和包管理。</string>
 	</dict>
 	<dict>
-		<key>spolightKeys</key>
-		<array>
-			<string>Head First Android开发</string>
-			<string>Android</string>
-		</array>
+		<key>spolightid</key>
+		<string>spolightid9</string>
+		<key>spolightKey</key>
+		<string>Android|Head First Android开发</string>
 		<key>title</key>
 		<string>Head First Android开发</string>
 		<key>author</key>
@@ -193,12 +185,10 @@
 		<string>《Head First Android开发》如果你有一个很好的想法，要开发一流的Android应用，这本书会帮你用zui快的速度构建你的第yi个实际应用。你会学到一些实践技巧，掌握如何建立应用的结构，如何设计界面，如何创建数据库，如何让你的应用同时适用手机和平板电脑，以及很多其他方面。这就像是有一位富有经验的Android开发人员坐在你旁边！你只需要对Java有一些了解就能轻松地学习这本书。</string>
 	</dict>
 	<dict>
-		<key>spolightKeys</key>
-		<array>
-			<string>React</string>
-			<string>React Native入门与实战</string>
-			<string>React Native</string>
-		</array>
+		<key>spolightid</key>
+		<string>spolightid10</string>
+		<key>spolightKey</key>
+		<string>React|React Native|React Native入门与实战</string>
 		<key>title</key>
 		<string>React Native入门与实战.jpg</string>
 		<key>author</key>
@@ -215,11 +205,10 @@
 		<string>本书共4部分，首先简要介绍了React Native的开发基础知识，然后介绍了React Native的API、组件以及Native扩展和组件的封装，接着介绍了App的动态更新和上架过程，最后通过3个案例介绍了如何使用React Native开发原生App。</string>
 	</dict>
 	<dict>
-		<key>spolightKeys</key>
-		<array>
-			<string>JavaScript高级程序设计</string>
-			<string>JavaScript</string>
-		</array>
+		<key>spolightid</key>
+		<string>spolightid11</string>
+		<key>spolightKey</key>
+		<string>JavaScript|JavaScript高级程序设计</string>
 		<key>title</key>
 		<string>JavaScript高级程序设计</string>
 		<key>author</key>

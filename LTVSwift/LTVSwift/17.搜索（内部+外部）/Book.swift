@@ -17,7 +17,8 @@ class Book: NSObject {
     @objc var price: String?
     @objc var press: String?
     @objc var intro: String?
-    @objc var spolightKeys: Array<String>?
+    @objc var spolightKey: String?
+    @objc var spolightid: String?
     
     init(dictionary: [String: String]) {
         super.init()
@@ -37,7 +38,8 @@ class Book: NSObject {
             "price": "price",
             "press": "press",
             "intro": "intro",
-            "spolightKeys" : "spolightKeys"
+            "spolightKey" : "spolightKey",
+            "spolightid" : "spolightid"
         ]
         return mapList[key]
     }
