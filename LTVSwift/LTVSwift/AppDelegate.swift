@@ -7,29 +7,15 @@
 //
 
 import UIKit
+import CoreSpotlight
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-
-        if #available(iOS 9.0, *) {
-            let icon1 = UIApplicationShortcutIcon.init(type: .pause)
-            let item1 = UIApplicationShortcutItem.init(type: "timer", localizedTitle: "计时器", localizedSubtitle: nil, icon: icon1, userInfo: ["key":"timer"])
-            let icon2 = UIApplicationShortcutIcon.init(type: .play)
-            let item2 = UIApplicationShortcutItem.init(type: "videoPlayer", localizedTitle: "视频播放器", localizedSubtitle: nil, icon: icon2, userInfo: ["key":"video"])
-            let icon3 = UIApplicationShortcutIcon.init(type: .location)
-            let item3 = UIApplicationShortcutItem.init(type: "location", localizedTitle: "定位服务", localizedSubtitle: nil, icon: icon3, userInfo: ["key":"location"])
-            let icon4 = UIApplicationShortcutIcon.init(type: .add)
-            let item4 = UIApplicationShortcutItem.init(type: "3DTouch", localizedTitle: "3DTouch", localizedSubtitle: nil, icon: icon4, userInfo: ["key":"3DTouch"])
-            UIApplication.shared.shortcutItems = [item1,item2,item3,item4]
-        }
-        
-        
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = UIColor.black
@@ -39,9 +25,95 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = navc
         window?.makeKeyAndVisible()
         
+        if #available(iOS 9.0, *) {
+            self.setupShortCut()
+            self.setupSpotlight()
+        }
+        
         return true
     }
+
+    func applicationWillResignActive(_ application: UIApplication) {
+        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
+        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+    }
+
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
+        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    }
+
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    }
+
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    }
+
+    func applicationWillTerminate(_ application: UIApplication) {
+        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+}
+
+extension AppDelegate {
     
+    // 3DTouch ShortCut
+    @available (iOS 9.0, *)
+    func setupShortCut() {
+        let icon1 = UIApplicationShortcutIcon(type: .pause)
+        let item1 = UIApplicationShortcutItem(type: "timer", localizedTitle: "计时器", localizedSubtitle: nil, icon: icon1, userInfo: ["key":"timer"])
+        let icon2 = UIApplicationShortcutIcon(type: .play)
+        let item2 = UIApplicationShortcutItem(type: "videoPlayer", localizedTitle: "视频播放器", localizedSubtitle: nil, icon: icon2, userInfo: ["key":"video"])
+        let icon3 = UIApplicationShortcutIcon(type: .location)
+        let item3 = UIApplicationShortcutItem(type: "location", localizedTitle: "定位服务", localizedSubtitle: nil, icon: icon3, userInfo: ["key":"location"])
+        let icon4 = UIApplicationShortcutIcon(type: .add)
+        let item4 = UIApplicationShortcutItem(type: "3DTouch", localizedTitle: "3DTouch", localizedSubtitle: nil, icon: icon4, userInfo: ["key":"3DTouch"])
+        UIApplication.shared.shortcutItems = [item1,item2,item3,item4]
+    }
+    
+    // Spotlight
+    @available(iOS 9.0, *)
+    func setupSpotlight() {
+        
+        guard let path = Bundle.main.path(forResource: "books", ofType: "plist") else {
+            return
+        }
+        var books:[Book] = []
+        if let originData = NSArray(contentsOfFile: path) as? Array<[String:String]> {
+            for data in originData {
+                books.append(Book(dictionary: data))
+            }
+        }
+        
+        var items:[CSSearchableItem] = []
+        for book in books {
+            
+            let attributeSet = CSSearchableItemAttributeSet(itemContentType: "book")
+            attributeSet.title = book.title
+            attributeSet.contentDescription = book.description
+            attributeSet.thumbnailData = (book.cover != nil) ? UIImageJPEGRepresentation(UIImage(named: "\(book.cover!).jpg")!, 1.0) : nil
+            attributeSet.keywords = book.spolightKeys
+    
+            print(book.spolightKeys)
+            
+            let item = CSSearchableItem(uniqueIdentifier: "book", domainIdentifier: "book_domain", attributeSet: attributeSet)
+    
+            items.append(item)
+        }
+
+        CSSearchableIndex.default().indexSearchableItems(items) {
+            (error) in
+            if error != nil {
+                print("失败：\(error!.localizedDescription)")
+            } else {
+                print("成功")
+            }
+        }
+    }
+}
+
+extension AppDelegate {
     @available(iOS 9.0, *)
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
         
@@ -92,30 +164,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             navc.popToRootViewController(animated: false)
         }
         navc.show(vc, sender: nil)
-
+        
         completionHandler(true)
     }
-
-    func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
-    }
-
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-    }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
+        
+        let identifier = userActivity.userInfo
+        print(identifier)
+        
+        return true
     }
 }
-
