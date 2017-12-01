@@ -138,5 +138,13 @@
 		<key>DemoBusiness</key>
 		<string>BookListViewController</string>
 	</dict>
+	<dict>
+		<key>DemoKey</key>
+		<string>XIBAutoLayout</string>
+		<key>DemoItem</key>
+		<string>XIB横竖屏自动布局</string>
+		<key>DemoBusiness</key>
+		<string>RotateAutoLayoutViewController</string>
+	</dict>
 </array>
 </plist>

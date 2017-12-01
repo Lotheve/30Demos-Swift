@@ -104,6 +104,7 @@ extension AppDelegate {
                     print(keys)
                 }
                 
+                //每一个CSSearchableItem的uniqueIdentifier必须唯一
                 let item = CSSearchableItem(uniqueIdentifier: id, domainIdentifier: "book_domain", attributeSet: attributeSet)
                 
                 items.append(item)
@@ -122,6 +123,7 @@ extension AppDelegate {
 }
 
 extension AppDelegate {
+    //ShortCut
     @available(iOS 9.0, *)
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
         
@@ -176,6 +178,7 @@ extension AppDelegate {
         completionHandler(true)
     }
     
+    //Spolight
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
         
         if userActivity.userInfo != nil, let identifier = userActivity.userInfo!["kCSSearchableItemActivityIdentifier"] as? String  {

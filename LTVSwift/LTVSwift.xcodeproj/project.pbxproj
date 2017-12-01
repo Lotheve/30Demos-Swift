@@ -38,6 +38,9 @@
 		6E3ACC391FBD7B8D0029BDFD /* AddressBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6E3ACC371FBD7B8D0029BDFD /* AddressBook.xcdatamodeld */; };
 		6E3ACC3C1FBD7F140029BDFD /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E3ACC3A1FBD7F140029BDFD /* apple.png */; };
 		6E3ACC3D1FBD7F140029BDFD /* gentleman.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E3ACC3B1FBD7F140029BDFD /* gentleman.png */; };
+		6E3FA5D51FD139D5000AF89C /* RotateAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3FA5D31FD139D5000AF89C /* RotateAutoLayoutViewController.swift */; };
+		6E3FA5D61FD139D5000AF89C /* RotateAutoLayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E3FA5D41FD139D5000AF89C /* RotateAutoLayoutViewController.xib */; };
+		6E3FA5D81FD13DD4000AF89C /* 未来简史.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E3FA5D71FD13DD4000AF89C /* 未来简史.jpg */; };
 		6E3FBAB01FAC42CE00157CFE /* ThreeDTouchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3FBAAE1FAC42CD00157CFE /* ThreeDTouchController.swift */; };
 		6E3FBAB11FAC42CE00157CFE /* ThreeDTouchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E3FBAAF1FAC42CE00157CFE /* ThreeDTouchController.xib */; };
 		6E3FBAB31FAC557400157CFE /* PreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3FBAB21FAC557400157CFE /* PreviewController.swift */; };
@@ -172,6 +175,9 @@
 		6E3ACC381FBD7B8D0029BDFD /* AddressBook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AddressBook.xcdatamodel; sourceTree = "<group>"; };
 		6E3ACC3A1FBD7F140029BDFD /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple.png; sourceTree = "<group>"; };
 		6E3ACC3B1FBD7F140029BDFD /* gentleman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gentleman.png; sourceTree = "<group>"; };
+		6E3FA5D31FD139D5000AF89C /* RotateAutoLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotateAutoLayoutViewController.swift; sourceTree = "<group>"; };
+		6E3FA5D41FD139D5000AF89C /* RotateAutoLayoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RotateAutoLayoutViewController.xib; sourceTree = "<group>"; };
+		6E3FA5D71FD13DD4000AF89C /* 未来简史.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "未来简史.jpg"; sourceTree = "<group>"; };
 		6E3FBAAE1FAC42CD00157CFE /* ThreeDTouchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDTouchController.swift; sourceTree = "<group>"; };
 		6E3FBAAF1FAC42CE00157CFE /* ThreeDTouchController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThreeDTouchController.xib; sourceTree = "<group>"; };
 		6E3FBAB21FAC557400157CFE /* PreviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewController.swift; sourceTree = "<group>"; };
@@ -342,6 +348,7 @@
 				6E6325551FBA96630046171F /* 15.CoreData */,
 				6EB400321FC267A200172174 /* 16.导航栏平滑切换 */,
 				6E874FFC1FCE574B009447C5 /* 17.搜索（内部+外部） */,
+				6E3FA5D21FD13700000AF89C /* 18.XIB横竖屏自动布局 */,
 				6E207D691FA71CE600E323EA /* Assets.xcassets */,
 				6E207D6B1FA71CE600E323EA /* LaunchScreen.storyboard */,
 				6E207D6E1FA71CE600E323EA /* Info.plist */,
@@ -403,6 +410,16 @@
 				6E3025F91FAC68D1005634DF /* LTVTableView.swift */,
 			);
 			path = 4.3DTouch;
+			sourceTree = "<group>";
+		};
+		6E3FA5D21FD13700000AF89C /* 18.XIB横竖屏自动布局 */ = {
+			isa = PBXGroup;
+			children = (
+				6E3FA5D71FD13DD4000AF89C /* 未来简史.jpg */,
+				6E3FA5D31FD139D5000AF89C /* RotateAutoLayoutViewController.swift */,
+				6E3FA5D41FD139D5000AF89C /* RotateAutoLayoutViewController.xib */,
+			);
+			path = "18.XIB横竖屏自动布局";
 			sourceTree = "<group>";
 		};
 		6E4E3CF71FBD67220091FA91 /* Resources */ = {
@@ -767,9 +784,11 @@
 				6E6325511FBA84CC0046171F /* bund.png in Resources */,
 				6E3ACC3C1FBD7F140029BDFD /* apple.png in Resources */,
 				6E4E3D031FBD67220091FA91 /* Taylor Swift.png in Resources */,
+				6E3FA5D81FD13DD4000AF89C /* 未来简史.jpg in Resources */,
 				6E87505B1FCE986B009447C5 /* BookDetailViewController.xib in Resources */,
 				6E87500E1FCE5DB6009447C5 /* 高性能JavaScript.jpg in Resources */,
 				6E207D6A1FA71CE600E323EA /* Assets.xcassets in Resources */,
+				6E3FA5D61FD139D5000AF89C /* RotateAutoLayoutViewController.xib in Resources */,
 				6E207DB21FA73C9E00E323EA /* demoList.plist in Resources */,
 				6E114FF61FB00114009AD905 /* DataPickerController.xib in Resources */,
 				6E4E3D021FBD67220091FA91 /* Simon baker.png in Resources */,
@@ -807,6 +826,7 @@
 				6E9A967F1FB2DBEB00405E1B /* RefreshActionController.swift in Sources */,
 				6E4E3CF51FBD639E0091FA91 /* ContactCell.swift in Sources */,
 				6E57DA0D1FB306080064552F /* ImageTransformController.swift in Sources */,
+				6E3FA5D51FD139D5000AF89C /* RotateAutoLayoutViewController.swift in Sources */,
 				6E9A96201FB1865A00405E1B /* CarouselCell.swift in Sources */,
 				6E71B0D61FAAB2C900710A45 /* VideoPlayerController.swift in Sources */,
 				6E114FF51FB00114009AD905 /* DataPickerController.swift in Sources */,
