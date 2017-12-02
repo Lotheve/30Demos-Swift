@@ -101,7 +101,6 @@ extension AppDelegate {
                 if let spolightKey = book.spolightKey {
                     let keys = spolightKey.components(separatedBy: "|")
                     attributeSet.keywords = keys
-                    print(keys)
                 }
                 
                 //每一个CSSearchableItem的uniqueIdentifier必须唯一
@@ -114,9 +113,9 @@ extension AppDelegate {
         CSSearchableIndex.default().indexSearchableItems(items) {
             (error) in
             if error != nil {
-                print("失败：\(error!.localizedDescription)")
+                print("Spolight注册失败：\(error!.localizedDescription)")
             } else {
-                print("成功")
+                print("Spolight注册成功")
             }
         }
     }

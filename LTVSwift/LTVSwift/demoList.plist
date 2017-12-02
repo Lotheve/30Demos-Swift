@@ -146,5 +146,13 @@
 		<key>DemoBusiness</key>
 		<string>RotateAutoLayoutViewController</string>
 	</dict>
+	<dict>
+		<key>DemoKey</key>
+		<string>Splash</string>
+		<key>DemoItem</key>
+		<string>Splash</string>
+		<key>DemoBusiness</key>
+		<string>SplashViewController</string>
+	</dict>
 </array>
 </plist>
