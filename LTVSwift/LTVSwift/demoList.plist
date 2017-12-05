@@ -154,5 +154,13 @@
 		<key>DemoBusiness</key>
 		<string>SplashViewController</string>
 	</dict>
+	<dict>
+		<key>DemoKey</key>
+		<string>Moments</string>
+		<key>DemoItem</key>
+		<string>粗仿朋友圈</string>
+		<key>DemoBusiness</key>
+		<string>MomentsViewController</string>
+	</dict>
 </array>
 </plist>

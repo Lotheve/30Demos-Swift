@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>avatar</key>
+		<string>gentleman.png</string>
+		<key>name</key>
+		<string>Lotheve</string>
+		<key>content</key>
+		<string>测试测试测试测试测试测试测试测试测试测试测试测试测试测试</string>
+		<key>images</key>
+		<string>高性能JavaScript.jpg|精通Swift设计模式.jpg|Head First Android开发.jpg</string>
+	</dict>
+	<dict>
+		<key>avatar</key>
+		<string>gentleman.png</string>
+		<key>name</key>
+		<string>Lotheve</string>
+		<key>content</key>
+		<string>测试测试测试测试测试测试测试测试测试测试测试测试测试测试</string>
+		<key>images</key>
+		<string>高性能JavaScript.jpg|精通Swift设计模式.jpg|Head First Android开发.jpg|PHP学习手册.jpg</string>
+	</dict>
+	<dict>
+		<key>avatar</key>
+		<string>gentleman.png</string>
+		<key>name</key>
+		<string>Lotheve</string>
+		<key>content</key>
+		<string>测试测试测试测试测试测试测试测试测试测试测试测试测试测试</string>
+		<key>images</key>
+		<string>高性能JavaScript.jpg</string>
+	</dict>
+	<dict>
+		<key>avatar</key>
+		<string>gentleman.png</string>
+		<key>name</key>
+		<string>Lotheve</string>
+		<key>content</key>
+		<string>测试测试测试测试测试测试测试测试测试测试测试测试测试测试</string>
+	</dict>
+</array>
+</plist>
