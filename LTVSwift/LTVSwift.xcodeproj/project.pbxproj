@@ -128,6 +128,17 @@
 		6ECA01691FB437F600D5F3A2 /* GradientTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA01681FB437F600D5F3A2 /* GradientTableController.swift */; };
 		6ECA016B1FB43EE400D5F3A2 /* GradientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA016A1FB43EE400D5F3A2 /* GradientCell.swift */; };
 		6ED1E9831FBD8F58007DDE77 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED1E9821FBD8F58007DDE77 /* CoreDataManager.swift */; };
+		6ED368F91FD7C448001A843D /* moment1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6ED368EF1FD7C448001A843D /* moment1.jpg */; };
+		6ED368FA1FD7C448001A843D /* moment10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6ED368F01FD7C448001A843D /* moment10.jpg */; };
+		6ED368FB1FD7C448001A843D /* moment2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6ED368F11FD7C448001A843D /* moment2.jpg */; };
+		6ED368FC1FD7C448001A843D /* moment3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6ED368F21FD7C448001A843D /* moment3.jpg */; };
+		6ED368FD1FD7C448001A843D /* moment4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6ED368F31FD7C448001A843D /* moment4.jpg */; };
+		6ED368FE1FD7C448001A843D /* moment5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6ED368F41FD7C448001A843D /* moment5.jpg */; };
+		6ED368FF1FD7C448001A843D /* moment6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6ED368F51FD7C448001A843D /* moment6.jpg */; };
+		6ED369001FD7C448001A843D /* moment7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6ED368F61FD7C448001A843D /* moment7.jpg */; };
+		6ED369011FD7C448001A843D /* moment8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6ED368F71FD7C448001A843D /* moment8.jpg */; };
+		6ED369021FD7C448001A843D /* moment9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6ED368F81FD7C448001A843D /* moment9.jpg */; };
+		6ED369041FD7DC5B001A843D /* UIImageExtend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED369031FD7DC5B001A843D /* UIImageExtend.swift */; };
 		6EE1EF601FAFEFD000FB55CD /* GraduateColorController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EE1EF5F1FAFEFD000FB55CD /* GraduateColorController.xib */; };
 /* End PBXBuildFile section */
 
@@ -276,6 +287,17 @@
 		6ECA01681FB437F600D5F3A2 /* GradientTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientTableController.swift; sourceTree = "<group>"; };
 		6ECA016A1FB43EE400D5F3A2 /* GradientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientCell.swift; sourceTree = "<group>"; };
 		6ED1E9821FBD8F58007DDE77 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		6ED368EF1FD7C448001A843D /* moment1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = moment1.jpg; sourceTree = "<group>"; };
+		6ED368F01FD7C448001A843D /* moment10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = moment10.jpg; sourceTree = "<group>"; };
+		6ED368F11FD7C448001A843D /* moment2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = moment2.jpg; sourceTree = "<group>"; };
+		6ED368F21FD7C448001A843D /* moment3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = moment3.jpg; sourceTree = "<group>"; };
+		6ED368F31FD7C448001A843D /* moment4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = moment4.jpg; sourceTree = "<group>"; };
+		6ED368F41FD7C448001A843D /* moment5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = moment5.jpg; sourceTree = "<group>"; };
+		6ED368F51FD7C448001A843D /* moment6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = moment6.jpg; sourceTree = "<group>"; };
+		6ED368F61FD7C448001A843D /* moment7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = moment7.jpg; sourceTree = "<group>"; };
+		6ED368F71FD7C448001A843D /* moment8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = moment8.jpg; sourceTree = "<group>"; };
+		6ED368F81FD7C448001A843D /* moment9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = moment9.jpg; sourceTree = "<group>"; };
+		6ED369031FD7DC5B001A843D /* UIImageExtend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtend.swift; sourceTree = "<group>"; };
 		6EE1EF5F1FAFEFD000FB55CD /* GraduateColorController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GraduateColorController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -601,6 +623,7 @@
 		6E884E5B1FD3A0BA00A29A05 /* 20.粗仿朋友圈 */ = {
 			isa = PBXGroup;
 			children = (
+				6ED368EE1FD7C448001A843D /* Resources */,
 				6E884E5E1FD3B4B000A29A05 /* MomentsViewController.swift */,
 				6E884E5F1FD3B4B000A29A05 /* MomentsViewController.xib */,
 				6E884E661FD4F08600A29A05 /* Moment.swift */,
@@ -608,7 +631,7 @@
 				6E884E631FD3B5EE00A29A05 /* MomentsCell.xib */,
 				6E884EF41FD6BFC700A29A05 /* MomentImageCell.swift */,
 				6E884EF51FD6BFC700A29A05 /* MomentImageCell.xib */,
-				6E884E6A1FD4F34700A29A05 /* Moments.plist */,
+				6ED369031FD7DC5B001A843D /* UIImageExtend.swift */,
 			);
 			path = "20.粗仿朋友圈";
 			sourceTree = "<group>";
@@ -668,6 +691,24 @@
 				6ECA016A1FB43EE400D5F3A2 /* GradientCell.swift */,
 			);
 			path = "11.TableViewCell背景渐变";
+			sourceTree = "<group>";
+		};
+		6ED368EE1FD7C448001A843D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6E884E6A1FD4F34700A29A05 /* Moments.plist */,
+				6ED368EF1FD7C448001A843D /* moment1.jpg */,
+				6ED368F11FD7C448001A843D /* moment2.jpg */,
+				6ED368F21FD7C448001A843D /* moment3.jpg */,
+				6ED368F31FD7C448001A843D /* moment4.jpg */,
+				6ED368F41FD7C448001A843D /* moment5.jpg */,
+				6ED368F51FD7C448001A843D /* moment6.jpg */,
+				6ED368F61FD7C448001A843D /* moment7.jpg */,
+				6ED368F71FD7C448001A843D /* moment8.jpg */,
+				6ED368F81FD7C448001A843D /* moment9.jpg */,
+				6ED368F01FD7C448001A843D /* moment10.jpg */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -780,14 +821,17 @@
 				6E9A963B1FB18A4000405E1B /* 8.jpg in Resources */,
 				6E6325531FBA84CC0046171F /* spark.png in Resources */,
 				6E4E3CFE1FBD67220091FA91 /* Alexandre Smith.png in Resources */,
+				6ED369021FD7C448001A843D /* moment9.jpg in Resources */,
 				6E8750121FCE5DB6009447C5 /* Swift学习手册.jpg in Resources */,
 				6E9A963C1FB18A4000405E1B /* 9.jpg in Resources */,
 				6E6E662C1FAABBDB00067A14 /* video.mov in Resources */,
 				6E207D6D1FA71CE600E323EA /* LaunchScreen.storyboard in Resources */,
 				6E9A963A1FB18A4000405E1B /* 7.jpg in Resources */,
+				6ED368F91FD7C448001A843D /* moment1.jpg in Resources */,
 				6E4E3CF21FBD62790091FA91 /* ContactAddController.xib in Resources */,
 				6E884EF71FD6BFC700A29A05 /* MomentImageCell.xib in Resources */,
 				6E9A96211FB1865A00405E1B /* CarouselCell.xib in Resources */,
+				6ED368FA1FD7C448001A843D /* moment10.jpg in Resources */,
 				6E3FBAB11FAC42CE00157CFE /* ThreeDTouchController.xib in Resources */,
 				6E12130A1FA9F9E9007207D1 /* TimerCell.xib in Resources */,
 				6E2996071FB5509E009EF254 /* iconfont-password.png in Resources */,
@@ -808,6 +852,8 @@
 				6E8750131FCE5DB6009447C5 /* Nginx高性能Web服务器详解.jpg in Resources */,
 				6E2996051FB5509E009EF254 /* arm-up-right@2x.png in Resources */,
 				6E884E6B1FD4F34700A29A05 /* Moments.plist in Resources */,
+				6ED369001FD7C448001A843D /* moment7.jpg in Resources */,
+				6ED368FD1FD7C448001A843D /* moment4.jpg in Resources */,
 				6E8750011FCE57EF009447C5 /* books.plist in Resources */,
 				6E6E66311FAAC18D00067A14 /* LocationServiceController.xib in Resources */,
 				6E8750111FCE5DB6009447C5 /* Objective-C程序设计（第6版）.jpg in Resources */,
@@ -818,8 +864,11 @@
 				6E4E3CF61FBD639E0091FA91 /* ContactCell.xib in Resources */,
 				6ECA01641FB3D4E100D5F3A2 /* cat.jpg in Resources */,
 				6E6325521FBA84CC0046171F /* rocket.png in Resources */,
+				6ED368FC1FD7C448001A843D /* moment3.jpg in Resources */,
+				6ED369011FD7C448001A843D /* moment8.jpg in Resources */,
 				6ECA01661FB425B400D5F3A2 /* ImageTransformController.xib in Resources */,
 				6E8750171FCE5DB6009447C5 /* 精通Swift设计模式.jpg in Resources */,
+				6ED368FE1FD7C448001A843D /* moment5.jpg in Resources */,
 				6E2996041FB5509E009EF254 /* arm-up-left@2x.png in Resources */,
 				6E1213061FA9A9D4007207D1 /* TimerController.xib in Resources */,
 				6E87500F1FCE5DB6009447C5 /* JavaScript高级程序设计.jpg in Resources */,
@@ -829,6 +878,7 @@
 				6E8750141FCE5DB6009447C5 /* Head First Android开发.jpg in Resources */,
 				6E9A96381FB18A4000405E1B /* 5.jpg in Resources */,
 				6E8750551FCE9301009447C5 /* BookCell.xib in Resources */,
+				6ED368FB1FD7C448001A843D /* moment2.jpg in Resources */,
 				6E2996031FB5509E009EF254 /* arm-down-right@2x.png in Resources */,
 				6E884E651FD3B5EE00A29A05 /* MomentsCell.xib in Resources */,
 				6E4E3D071FBD6D2C0091FA91 /* avatar.png in Resources */,
@@ -844,6 +894,7 @@
 				6E87500E1FCE5DB6009447C5 /* 高性能JavaScript.jpg in Resources */,
 				6E207D6A1FA71CE600E323EA /* Assets.xcassets in Resources */,
 				6E3FA5D61FD139D5000AF89C /* RotateAutoLayoutViewController.xib in Resources */,
+				6ED368FF1FD7C448001A843D /* moment6.jpg in Resources */,
 				6E207DB21FA73C9E00E323EA /* demoList.plist in Resources */,
 				6E114FF61FB00114009AD905 /* DataPickerController.xib in Resources */,
 				6E4E3D021FBD67220091FA91 /* Simon baker.png in Resources */,
@@ -914,6 +965,7 @@
 				6E9A967B1FB28A0500405E1B /* CameraController.swift in Sources */,
 				6E8750571FCE941E009447C5 /* Book.swift in Sources */,
 				6E57DA061FB2F7B70064552F /* RefreshContentView.swift in Sources */,
+				6ED369041FD7DC5B001A843D /* UIImageExtend.swift in Sources */,
 				6E4E3CEE1FBD62100091FA91 /* AddressBookController.swift in Sources */,
 				6E207D911FA71E2300E323EA /* MainViewController.swift in Sources */,
 				6E207D931FA7236A00E323EA /* define.swift in Sources */,

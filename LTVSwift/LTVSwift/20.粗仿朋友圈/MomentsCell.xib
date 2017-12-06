@@ -35,16 +35,17 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRn-nt-ySy">
-                        <rect key="frame" x="56" y="27" width="248" height="20.5"/>
+                        <rect key="frame" x="56" y="27" width="248" height="10.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <color key="highlightedColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </label>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Smi-kO-oMD">
-                        <rect key="frame" x="56" y="55.5" width="208" height="20"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <rect key="frame" x="56" y="45.5" width="208" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="20" id="46t-Bn-xR8"/>
+                            <constraint firstAttribute="height" priority="999" constant="20" id="46t-Bn-xR8"/>
+                            <constraint firstAttribute="width" constant="208" id="Jmc-e0-nOq"/>
                         </constraints>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="R0v-Yh-i86">
                             <size key="itemSize" width="50" height="50"/>
@@ -58,20 +59,20 @@
                     <constraint firstAttribute="trailing" secondItem="Nfu-gU-od5" secondAttribute="trailing" constant="16" id="4qj-nU-xWr"/>
                     <constraint firstItem="Smi-kO-oMD" firstAttribute="top" secondItem="fRn-nt-ySy" secondAttribute="bottom" constant="8" id="IOK-JV-GGv"/>
                     <constraint firstItem="Nfu-gU-od5" firstAttribute="leading" secondItem="DDW-PY-1Oc" secondAttribute="trailing" constant="8" id="Jig-RN-wzy"/>
-                    <constraint firstAttribute="trailing" secondItem="Smi-kO-oMD" secondAttribute="trailing" constant="56" id="Kpf-QD-nLx"/>
                     <constraint firstItem="fRn-nt-ySy" firstAttribute="leading" secondItem="DDW-PY-1Oc" secondAttribute="trailing" constant="8" id="RiE-L1-tuo"/>
                     <constraint firstItem="Smi-kO-oMD" firstAttribute="leading" secondItem="fRn-nt-ySy" secondAttribute="leading" id="U4D-CT-Koa"/>
                     <constraint firstItem="DDW-PY-1Oc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Una-ad-2UY"/>
                     <constraint firstItem="DDW-PY-1Oc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="YEa-LL-Kj3"/>
                     <constraint firstItem="Nfu-gU-od5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="cEJ-qJ-s5n"/>
-                    <constraint firstAttribute="bottom" secondItem="Smi-kO-oMD" secondAttribute="bottom" id="coO-PN-Zng"/>
+                    <constraint firstAttribute="bottom" secondItem="Smi-kO-oMD" secondAttribute="bottom" constant="10" id="coO-PN-Zng"/>
                     <constraint firstItem="fRn-nt-ySy" firstAttribute="top" secondItem="Nfu-gU-od5" secondAttribute="bottom" id="ego-2t-4sC"/>
                     <constraint firstAttribute="trailing" secondItem="fRn-nt-ySy" secondAttribute="trailing" constant="16" id="yJA-sa-esA"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="avatar" destination="DDW-PY-1Oc" id="G21-mU-g9B"/>
-                <outlet property="containerCollectionViewHeight" destination="46t-Bn-xR8" id="20y-jO-lWz"/>
+                <outlet property="containerCollectionViewHeight" destination="46t-Bn-xR8" id="maE-vs-UwR"/>
+                <outlet property="containerCollectionViewWidth" destination="Jmc-e0-nOq" id="LYC-kg-3oV"/>
                 <outlet property="containerCollectonView" destination="Smi-kO-oMD" id="fun-Kd-wdW"/>
                 <outlet property="momentLabel" destination="fRn-nt-ySy" id="DBN-QB-Swm"/>
                 <outlet property="nameLabel" destination="Nfu-gU-od5" id="MGP-SG-enl"/>

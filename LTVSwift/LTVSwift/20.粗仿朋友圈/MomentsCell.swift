@@ -13,9 +13,17 @@ let MomentsCellID = "MomentsCellID"
 fileprivate let edge_margin:CGFloat = 10
 fileprivate let item_space:CGFloat = 10
 
-fileprivate let collectionView_rid_width:CGFloat = 56+56
+fileprivate let collectionView_rid_width:CGFloat = 56+70
+fileprivate let item_length:CGFloat = (SCREEN_WIDTH - collectionView_rid_width - 2*item_space)/3
 
 fileprivate let max_length:CGFloat = 140
+
+enum ImageContainerStyle {
+    case none
+    case single
+    case quaternate
+    case ennead
+}
 
 class MomentsCell: UITableViewCell {
     
@@ -25,11 +33,15 @@ class MomentsCell: UITableViewCell {
     @IBOutlet var containerCollectonView: UICollectionView!
     
     @IBOutlet var containerCollectionViewHeight: NSLayoutConstraint!
+    @IBOutlet var containerCollectionViewWidth: NSLayoutConstraint!
     
     var item_width:CGFloat = 0
     var item_height:CGFloat = 0
     
+    
     var moment:Moment?
+    var images:[UIImage] = []
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,15 +50,14 @@ class MomentsCell: UITableViewCell {
         containerCollectionViewHeight.constant = 0
         
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsetsMake(edge_margin, edge_margin, edge_margin, edge_margin)
+        layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0)
         containerCollectonView.setCollectionViewLayout(layout, animated: true)
         containerCollectonView.delegate = self
         containerCollectonView.dataSource = self
         containerCollectonView.showsVerticalScrollIndicator = false
         containerCollectonView.showsHorizontalScrollIndicator = false
-        containerCollectonView.backgroundColor = UIColor.lightGray
+        containerCollectonView.backgroundColor = UIColor.clear
         containerCollectonView.register(UINib(nibName: "MomentImageCell", bundle: nil), forCellWithReuseIdentifier: MomentImageCellID)
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -66,68 +77,114 @@ class MomentsCell: UITableViewCell {
         }
         nameLabel.text = moment.nickname
         momentLabel.text = moment.momentContent
+
+        self.layoutContainerView()
         
-        self.calculateItemSize()
-        self.layoutCollectionView()
+        if let images = moment.images {
+            for imageName in images {
+                let originImage = UIImage(named: imageName)!
+                let image = compressImage(originImage, size: CGSize(width: item_width, height: item_height))
+                self.images.append(image)
+            }
+        }
         
         self.containerCollectonView.reloadData()
     }
-    
-    func calculateItemSize() {
-        if let images = moment?.images {
-            // 无图
-            if images.count == 0
+
+    func compressImage(_ image:UIImage, size:CGSize) -> UIImage {
+        let imageSize = image.size
+        let scale = size.width/size.height
+        if imageSize.width/imageSize.height == scale
+        {
+            //等比缩放
+            return image.redraw(inRect: CGRect(x: 0, y: 0, width: imageSize.width, height: imageSize.height), targetSize: size)
+        }
+        else
+        {
+            //先裁剪再缩放
+            if imageSize.width/imageSize.height > scale
             {
-                item_width = 0
-                item_height = 0
+                //水平裁剪
+                let width = imageSize.height * scale
+                let rect = CGRect(x: imageSize.width-width, y: 0, width: width, height: imageSize.height)
+                return image.redraw(inRect: rect, targetSize: size)
             }
-            // 单图
-            else if images.count == 1 {
-                if let image = UIImage(named: images.first!) {
-                    
-                    let size = image.size
-                    if size.width >= size.height {
-                        item_width = max_length
-                        item_height = max_length*(size.height/size.width)
-                    } else {
-                        item_height = max_length
-                        item_width = max_length*(size.width/size.height)
-                    }
-                    
-                } else {
-                    item_width = 0
-                    item_height = 0
-                }
+            else
+            {
+                //垂直裁剪
+                let height = imageSize.width/scale
+                let rect = CGRect(x: 0, y: imageSize.height-height, width: imageSize.width, height: height)
+                return image.redraw(inRect: rect, targetSize: size)
             }
-            // 多图
-            else if images.count > 1 {
-                let length = (SCREEN_WIDTH - collectionView_rid_width - 2*edge_margin - 2*item_space) / 3
-                item_width = length
-                item_height = length
-            }
-        } else {
-            item_width = 0
-            item_height = 0
         }
     }
     
-    func layoutCollectionView() {
+    func layoutContainerView() {
         if let images = moment?.images {
-            if images.count == 0 {
-                containerCollectionViewHeight.constant = 0
-            } else if images.count == 1 {
-                if item_height != 0 && item_width != 0 {
-                    containerCollectionViewHeight.constant = item_height + 2*edge_margin
-                } else {
-                    containerCollectionViewHeight.constant = 0
-                }
-            } else if images.count > 1 {
-                let imageCount = images.count <= 9 ? images.count : 9
-                let line = (imageCount-1)/3 + 1
-                let spaceHeight = CGFloat(line-1)*item_space
-                let margin = CGFloat(line)*item_height
-                containerCollectionViewHeight.constant = 2*edge_margin + spaceHeight + margin
+            if images.count == 0
+            {
+                self.refreshContainer(withType: .none)
             }
+            else if images.count == 1
+            {
+                self.refreshContainer(withType: .single)
+            }
+            else if images.count == 4
+            {
+                self.refreshContainer(withType: .quaternate)
+            }
+            else
+            {
+                self.refreshContainer(withType: .ennead)
+            }
+        }
+        else
+        {
+            self.refreshContainer(withType: .none)
+        }
+    }
+    
+    func refreshContainer(withType type:ImageContainerStyle) {
+        
+        switch type {
+        case .none:
+            item_width = 0
+            item_height = 0
+            containerCollectionViewHeight.constant = 0
+            containerCollectionViewWidth.constant = 0
+            
+        case .single:
+            let imageName = moment?.images?.first
+            let image = UIImage(named: imageName!)
+            let size = image!.size
+            if size.width >= size.height {
+                item_width = max_length
+                item_height = max_length*(size.height/size.width)
+            } else {
+                item_height = max_length
+                item_width = max_length*(size.width/size.height)
+            }
+            containerCollectionViewHeight.constant = item_height
+            containerCollectionViewWidth.constant = item_width
+            
+        case .quaternate:
+            item_width = item_length
+            item_height = item_length
+            
+            containerCollectionViewHeight.constant = 2*item_height + item_space
+            containerCollectionViewWidth.constant = CGFloat(ceilf(Float(2*item_width + item_space)))
+
+        case .ennead:
+            item_width = item_length
+            item_height = item_length
+            
+            let images = (moment?.images)!
+            let imageCount = images.count <= 9 ? images.count : 9
+            let line = (imageCount-1)/3 + 1
+            let spaceHeight = CGFloat(line-1)*item_space
+            let itemHeight = CGFloat(line)*item_height
+            containerCollectionViewHeight.constant = itemHeight + spaceHeight
+            containerCollectionViewWidth.constant = 3*item_width + 2*item_space
         }
     }
 }
@@ -138,12 +195,12 @@ extension MomentsCell: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MomentImageCellID, for: indexPath) as! MomentImageCell
         if let images = moment?.images, images.count > indexPath.row {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MomentImageCellID, for: indexPath) as! MomentImageCell
+            
             cell.imageView.image = UIImage(named: images[indexPath.row])
-            return cell
         }
-        return UICollectionViewCell()
+        return cell
     }
 }
 
