@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CaseCell" customModule="LTVSwift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="202" height="210"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="202" height="210"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UIi-Si-6Z3">
+                        <rect key="frame" x="0.0" y="0.0" width="202" height="210"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mj8-c3-uK7">
+                                <rect key="frame" x="0.0" y="0.0" width="202" height="210"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2x0-RS-vnk">
+                                        <rect key="frame" x="0.0" y="0.0" width="202" height="210"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="2x0-RS-vnk" secondAttribute="trailing" id="UnF-Aa-VrR"/>
+                                    <constraint firstAttribute="bottom" secondItem="2x0-RS-vnk" secondAttribute="bottom" id="Uq9-6b-vpC"/>
+                                    <constraint firstItem="2x0-RS-vnk" firstAttribute="leading" secondItem="Mj8-c3-uK7" secondAttribute="leading" id="c7H-7O-USW"/>
+                                    <constraint firstItem="2x0-RS-vnk" firstAttribute="top" secondItem="Mj8-c3-uK7" secondAttribute="top" id="cXq-9j-f5f"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Mj8-c3-uK7" firstAttribute="top" secondItem="UIi-Si-6Z3" secondAttribute="top" id="06o-O3-y3i"/>
+                            <constraint firstItem="Mj8-c3-uK7" firstAttribute="leading" secondItem="UIi-Si-6Z3" secondAttribute="leading" id="6qr-db-m43"/>
+                            <constraint firstAttribute="bottom" secondItem="Mj8-c3-uK7" secondAttribute="bottom" id="B93-2h-nbX"/>
+                            <constraint firstItem="Mj8-c3-uK7" firstAttribute="centerX" secondItem="UIi-Si-6Z3" secondAttribute="centerX" id="byd-cx-Caf"/>
+                            <constraint firstAttribute="trailing" secondItem="Mj8-c3-uK7" secondAttribute="trailing" id="p9b-nt-ilp"/>
+                            <constraint firstItem="Mj8-c3-uK7" firstAttribute="centerY" secondItem="UIi-Si-6Z3" secondAttribute="centerY" id="xfz-r4-3Vb"/>
+                        </constraints>
+                    </scrollView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="UIi-Si-6Z3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="EmY-D7-cc8"/>
+                <constraint firstItem="UIi-Si-6Z3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="b8k-xT-Bwm"/>
+                <constraint firstAttribute="bottom" secondItem="UIi-Si-6Z3" secondAttribute="bottom" id="vVz-lX-ZRY"/>
+                <constraint firstAttribute="trailing" secondItem="UIi-Si-6Z3" secondAttribute="trailing" id="w8R-G9-ki0"/>
+            </constraints>
+            <size key="customSize" width="202" height="210"/>
+            <connections>
+                <outlet property="imageView" destination="2x0-RS-vnk" id="ayO-8V-mpW"/>
+                <outlet property="scrollView" destination="UIi-Si-6Z3" id="k9U-id-lCe"/>
+            </connections>
+            <point key="canvasLocation" x="-53" y="65"/>
+        </collectionViewCell>
+    </objects>
+</document>

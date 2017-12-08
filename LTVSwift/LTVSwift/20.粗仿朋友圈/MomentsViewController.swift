@@ -56,6 +56,13 @@ extension MomentsViewController: UITableViewDataSource, UITableViewDelegate {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: MomentsCellID) as! MomentsCell
         let moment = moments[indexPath.row]
+        cell.showCaseHandler = {
+            images, index in
+            if index < images.count {
+                let caseview = CaseView(frame: UIScreen.main.bounds, images: images, curIndex: index)
+                UIApplication.shared.keyWindow?.addSubview(caseview)
+            }
+        }
         cell.configWith(moment: moment)
         return cell
     }

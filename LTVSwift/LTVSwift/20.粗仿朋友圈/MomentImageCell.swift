@@ -16,6 +16,7 @@ class MomentImageCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        imageView.contentMode = .scaleAspectFill
     }
 
 }

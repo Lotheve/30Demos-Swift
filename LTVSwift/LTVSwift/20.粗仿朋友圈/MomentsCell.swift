@@ -18,6 +18,8 @@ fileprivate let item_length:CGFloat = (SCREEN_WIDTH - collectionView_rid_width -
 
 fileprivate let max_length:CGFloat = 140
 
+typealias ShowCaseHandler = (_ images:[String], _ index: Int) -> Void
+
 enum ImageContainerStyle {
     case none
     case single
@@ -38,10 +40,8 @@ class MomentsCell: UITableViewCell {
     var item_width:CGFloat = 0
     var item_height:CGFloat = 0
     
-    
     var moment:Moment?
-    var images:[UIImage] = []
-    
+    var showCaseHandler:ShowCaseHandler?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -79,46 +79,9 @@ class MomentsCell: UITableViewCell {
         momentLabel.text = moment.momentContent
 
         self.layoutContainerView()
-        
-        if let images = moment.images {
-            for imageName in images {
-                let originImage = UIImage(named: imageName)!
-                let image = compressImage(originImage, size: CGSize(width: item_width, height: item_height))
-                self.images.append(image)
-            }
-        }
-        
+
         self.containerCollectonView.reloadData()
     }
-
-    func compressImage(_ image:UIImage, size:CGSize) -> UIImage {
-        let imageSize = image.size
-        let scale = size.width/size.height
-        if imageSize.width/imageSize.height == scale
-        {
-            //等比缩放
-            return image.redraw(inRect: CGRect(x: 0, y: 0, width: imageSize.width, height: imageSize.height), targetSize: size)
-        }
-        else
-        {
-            //先裁剪再缩放
-            if imageSize.width/imageSize.height > scale
-            {
-                //水平裁剪
-                let width = imageSize.height * scale
-                let rect = CGRect(x: imageSize.width-width, y: 0, width: width, height: imageSize.height)
-                return image.redraw(inRect: rect, targetSize: size)
-            }
-            else
-            {
-                //垂直裁剪
-                let height = imageSize.width/scale
-                let rect = CGRect(x: 0, y: imageSize.height-height, width: imageSize.width, height: height)
-                return image.redraw(inRect: rect, targetSize: size)
-            }
-        }
-    }
-    
     func layoutContainerView() {
         if let images = moment?.images {
             if images.count == 0
@@ -201,6 +164,14 @@ extension MomentsCell: UICollectionViewDelegate, UICollectionViewDataSource {
             cell.imageView.image = UIImage(named: images[indexPath.row])
         }
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        
+        if showCaseHandler != nil {
+            showCaseHandler!((self.moment?.images)!, indexPath.row)
+        }
     }
 }
 
